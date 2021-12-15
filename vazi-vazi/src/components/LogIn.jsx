@@ -19,16 +19,12 @@ const App = () => {
         }
     };
 
-
-
-    // if there's no user, show the login form
     return (
         <div>
             <div className="justify-content-center">
                 <h1>Log In</h1>
             </div>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="username">Username: </label>
                 <input
                     type="text"
                     value={username}
@@ -36,7 +32,6 @@ const App = () => {
                     onChange={(e) => setUsername(e.target.value)}
                 />
                 <div>
-                    <label htmlFor="password">password: </label>
                     <input
                         type="password"
                         value={password}

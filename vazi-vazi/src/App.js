@@ -3,19 +3,22 @@ import './App.css';
 import Registration from './components/Registration';
 import HomePage from './components/HomePage';
 import LogIn from './components/LogIn';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
-  return (
+  return ( 
+  <div id="main-body">
     <BrowserRouter>
-      <div className="App">
+     
         <Routes>
           <Route path="/" element={<HomePage />} />
             <Route path="/register" element={<Registration />} />
             <Route path="/login" element={<LogIn />} />
           </Routes>
+   
+    </BrowserRouter> 
     </div>
-    </BrowserRouter>
   );
 }
 
