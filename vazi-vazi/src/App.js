@@ -1,24 +1,29 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import '../src/styles/register.css';
+import '../src/styles/HomePage.css'
+import '../src/styles/MyNavBar.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Registration from './components/Registration';
 import HomePage from './components/HomePage';
 import LogIn from './components/LogIn';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function App() {
   return ( 
+  <BrowserRouter>
   <div id="main-body">
-    <BrowserRouter>
-     
+  
         <Routes>
           <Route path="/" element={<HomePage />} />
             <Route path="/register" element={<Registration />} />
             <Route path="/login" element={<LogIn />} />
           </Routes>
    
-    </BrowserRouter> 
+    
     </div>
+    </BrowserRouter> 
   );
 }
 

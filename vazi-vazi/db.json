@@ -1,0 +1,26 @@
+{
+    "products": [
+      {
+        "id": 101,
+        "name": "iPhone 13",
+        "price": 1000,
+        "qty": 5
+      },
+      {
+        "name": "iPhone 154",
+        "price": 1500,
+        "qty": 2,
+        "id": 102
+      }
+    ],
+    "users": [
+      {
+        "firstName": "Stefano",
+        "email": "stefano@gmail.com"
+      },
+      {
+        "firstName": "Sanaz",
+        "email": "sanaz@gmail.com"
+      }
+    ]
+  }
