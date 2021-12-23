@@ -1,26 +1,53 @@
 {
-    "products": [
-      {
-        "id": 101,
-        "name": "iPhone 13",
-        "price": 1000,
-        "qty": 5
-      },
-      {
-        "name": "iPhone 154",
-        "price": 1500,
-        "qty": 2,
-        "id": 102
+  "products": [
+    {
+      "id": "101",
+      "category": "shoes",
+      "name": "shoe1",
+      "price": "190",
+      "origin": "Italy",
+      "size": "40",
+      "composition": "80% Leather, 20% Polyester",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "comment": {
+        "rate": "4.5",
+        "comment": "I like it!"
       }
-    ],
-    "users": [
-      {
-        "firstName": "Stefano",
-        "email": "stefano@gmail.com"
-      },
-      {
-        "firstName": "Sanaz",
-        "email": "sanaz@gmail.com"
-      }
-    ]
-  }
+    }
+  ],
+  "users": [
+    {
+      "id": "user1",
+      "name": "Stefano",
+      "email": "stefano@gmail.com",
+      "password": "123aBc60"
+    },
+    {
+      "id": "user2",
+      "name": "Sanaz",
+      "email": "sanaz@gmail.com",
+      "password": "450aA26M"
+    },
+    {
+      "name": "melody",
+      "email": "melody456@gmail.com",
+      "password": "56987kK00",
+      "password2": "56987kK00",
+      "id": "kj9Twgs"
+    },
+    {
+      "name": "William",
+      "email": "will569@gmail.com",
+      "password": "7vgv7eRw!FLqT.5",
+      "password2": "7vgv7eRw!FLqT.5",
+      "id": "4ScGNuA"
+    },
+    {
+      "name": "William",
+      "email": "will569@gmail.com",
+      "password": "7vgv7eRw!FLqT.5",
+      "password2": "7vgv7eRw!FLqT.5",
+      "id": "z-i-eB_"
+    }
+  ]
+}
