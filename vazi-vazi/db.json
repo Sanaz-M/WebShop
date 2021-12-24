@@ -9,25 +9,13 @@
       "size": "40",
       "composition": "80% Leather, 20% Polyester",
       "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      "comment": {
+      "comments": {
         "rate": "4.5",
         "comment": "I like it!"
       }
     }
   ],
   "users": [
-    {
-      "id": "user1",
-      "name": "Stefano",
-      "email": "stefano@gmail.com",
-      "password": "123aBc60"
-    },
-    {
-      "id": "user2",
-      "name": "Sanaz",
-      "email": "sanaz@gmail.com",
-      "password": "450aA26M"
-    },
     {
       "name": "melody",
       "email": "melody456@gmail.com",
@@ -43,11 +31,11 @@
       "id": "4ScGNuA"
     },
     {
-      "name": "William",
-      "email": "will569@gmail.com",
-      "password": "7vgv7eRw!FLqT.5",
-      "password2": "7vgv7eRw!FLqT.5",
-      "id": "z-i-eB_"
+      "name": "nunu",
+      "email": "nunu@gmail.com",
+      "password": "RmH.k6ueQ2@S55Z",
+      "password2": "RmH.k6ueQ2@S55Z",
+      "id": "P0-rNnN"
     }
   ]
 }

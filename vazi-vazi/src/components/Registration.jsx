@@ -3,7 +3,6 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { Fragment, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import RegisterPhoto from '../assets/register-photo2.jpg';
-import uniqueId from 'lodash/uniqueId';
 
 
 const Registration = () => {
@@ -41,9 +40,9 @@ const Registration = () => {
             }
             if (response.ok) {
                 let data = await response.json()
-                console.log(data)
+                return data
             }
-            // else if (!email.match(/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/)) {
+            // else if (!email.includes(/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/)) {
             //     alert('Enter valid email address')
             // }
             else {

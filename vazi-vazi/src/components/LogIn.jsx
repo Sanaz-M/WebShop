@@ -3,15 +3,29 @@ import { useState } from "react";
 
 
 const App = () => {
-    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            let response = await fetch('http://localhost:3000/users', { 
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+            if(response.ok){
+                let data = await response.json()
+                console.log(data)
+            }
             if (password.length < 8) {
                 alert('Password is too short. More than 8 characters, please!')
             }
+            // for(let i=0; i<=response.length; i++){
+            //     if(password === response[i].password && email === response[i].email){
+            //         alert('welcome')
+            //     }
+            // }
         }
         catch (err) {
             console.error(err);
@@ -26,9 +40,9 @@ const App = () => {
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
-                    value={username}
+                    value={email}
                     placeholder="enter a username"
-                    onChange={(e) => setUsername(e.target.value)}
+                    onChange={(e) => setEmail(e.target.value)}
                 />
                 <div>
                     <input
@@ -40,7 +54,7 @@ const App = () => {
                 </div>
                 <button
                     type="submit"
-                    disabled={!username || !password}>Login</button>
+                    disabled={!email || !password}>Login</button>
             </form>
         </div>
     );
