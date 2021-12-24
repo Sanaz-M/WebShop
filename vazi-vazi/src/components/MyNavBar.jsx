@@ -11,25 +11,25 @@ const MyNavBar = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Link to="/features">Women</Link>
-                    <Link to="/pricing">Men</Link>
+                    <Link to="/features"><span>Women</span></Link>
+                    <Link to="/pricing"><span>Men</span></Link>
                     <NavDropdown title="Collections" id="collasible-nav-dropdown">
                         <Link to='/action/3.1'>
-                            <NavDropdown.Item>Bags</NavDropdown.Item>
+                            <NavDropdown.Item><span>Bags</span></NavDropdown.Item>
                         </Link>
                         <Link to='/action/3.2'>
-                            <NavDropdown.Item>Shoes</NavDropdown.Item>
+                            <NavDropdown.Item><span>Shoes</span></NavDropdown.Item>
                         </Link>
                         <Link to='/action/3.3'>
-                            <NavDropdown.Item>Something</NavDropdown.Item>
+                            <NavDropdown.Item><span>Something</span></NavDropdown.Item>
                         </Link>
                         <NavDropdown.Divider />
                         
                     </NavDropdown>
                 </Nav>
                 <Nav>
-                    <Link to="/deets">Blog</Link>
-                    <Link eventKey={2} to="/memes">Contact</Link>
+                    <Link to="/deets"><span>Blog</span></Link>
+                    <Link eventKey={2} to="/memes"><span>Contact</span></Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

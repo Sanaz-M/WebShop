@@ -1,4 +1,6 @@
 #myNavbar{
     font-family: 'Quicksand', sans-serif;
     padding: 0;
+    font-weight: bold;
+    color: purple;
 }
