@@ -6,14 +6,14 @@ export const getProductAction = (query) => {
     return async (dispatch) => {
 
         try {
-            const response = await fetch('http://localhost:3000/products', {
+            const response = await fetch('http://localhost:3000', {
                 headers: {
                     'Content-Type': 'application/json',
                 },
             })
-            console.log(response)
             if (response.ok) {
-                let data = await response.json()
+                let {data} = await response.json()
+                console.log(data)
                 dispatch({
                     type: GET_PRODUCTS,
                     payload: data,

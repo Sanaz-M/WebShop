@@ -1,4 +1,4 @@
-import { initialState } from '../store/index.js'
+import { initialState } from '../store/index'
 import { GET_PRODUCTS, TOGGLE_LOADER, SEARCH_QUERY } from '../action'
 
 

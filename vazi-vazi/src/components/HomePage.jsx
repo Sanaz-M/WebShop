@@ -3,7 +3,7 @@ import { Jumbotron, Button, Container, ListGroup } from 'react-bootstrap'
 import MyNavBar from './MyNavBar';
 import { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { getProductAction } from '../redux/action/index.js'
+import { getProductAction } from '../redux/action'
 
 
 const HomePage = () => {
@@ -47,7 +47,7 @@ const HomePage = () => {
 
       <ListGroup as="ul">
                         {
-                            productsResult.length > 0 && productsResult.map(product => (
+                            productsResult.length > 0 && productsResult.map((product) => (
 
                                 <ListGroup.Item
                                     key={product.id}
