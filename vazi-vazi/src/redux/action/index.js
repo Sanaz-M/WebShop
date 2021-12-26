@@ -6,7 +6,7 @@ export const getProductAction = (query) => {
     return async (dispatch) => {
 
         try {
-            const response = await fetch('http://localhost:3000', {
+            const response = await fetch('http://localhost:3000/products', {
                 headers: {
                     'Content-Type': 'application/json',
                 },

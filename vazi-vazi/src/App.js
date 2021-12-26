@@ -8,6 +8,7 @@ import Registration from './components/Registration';
 import HomePage from './components/HomePage';
 import LogIn from './components/LogIn';
 import Contact from './components/Contact';
+import ShoppingCart from './components/ShoppingCart';
 
 
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/register" element={<Registration />} />
             <Route path="/login" element={<LogIn />} />
             <Route path="/contact-us" element={<Contact />} />
+            <Route path="/shopping-cart" element={<ShoppingCart />} />
           </Routes>
    
     

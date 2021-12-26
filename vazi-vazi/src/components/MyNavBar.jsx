@@ -1,12 +1,27 @@
-import { Navbar, Nav, Button, FormControl, NavDropdown } from 'react-bootstrap'
+import { Navbar, Nav, Button, FormControl, NavDropdown, Form } from 'react-bootstrap'
 import { Link } from "react-router-dom";
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo.png';
+import { useState, useEffect } from 'react';
+import { getProductAction } from '../redux/action';
+import { useDispatch } from 'react-redux';
 
 
 const MyNavBar = () => {
+    const [query, setQuery] = useState('');
+
+    const searchChange = (e) => {
+        setQuery(e.target.value)
+    }
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getProductAction(query));
+    }, [query]);
+
     return (
         <Navbar collapseOnSelect expand="lg" fixed="top" id="myNavbar">
-            <Link to="/"><img src={Logo} alt="logo" width='70' height='70'/></Link>
+            <Link to="/"><img src={Logo} alt="logo" width='70' height='70' /></Link>
             {/* <Link to="/"><p>Vazi Vazi</p></Link> */}
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
@@ -24,10 +39,23 @@ const MyNavBar = () => {
                             <NavDropdown.Item><span>Something</span></NavDropdown.Item>
                         </Link>
                         <NavDropdown.Divider />
-                        
+
                     </NavDropdown>
                 </Nav>
                 <Nav>
+                    <Form className='mx-2' onSubmit={(e) => {
+                        e.preventDefault()
+                        dispatch(getProductAction(query))
+                    }}>
+                        <Form.Group controlId="formBasicEmail">
+                            <Form.Control
+                                type="text"
+                                placeholder="Search"
+                                value={query}
+                                onChange={searchChange}
+                            />
+                        </Form.Group>
+                    </Form>
                     <Link to="/deets"><span>Blog</span></Link>
                     <Link eventKey={2} to="/memes"><span>Contact</span></Link>
                 </Nav>

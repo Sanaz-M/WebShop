@@ -13,6 +13,20 @@
         "rate": "4.5",
         "comment": "I like it!"
       }
+    },
+    {
+      "id": "102",
+      "category": "shoes",
+      "name": "shoe2",
+      "price": "190",
+      "origin": "France",
+      "size": "40",
+      "composition": "80% Leather, 20% Polyester",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "comments": {
+        "rate": "4.5",
+        "comment": "I like it!"
+      }
     }
   ],
   "users": [
