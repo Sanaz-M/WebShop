@@ -7,7 +7,7 @@ export const getProductAction = (query) => {
     return async (dispatch) => {
 
         try {
-            const response = await fetch('http://localhost:3000/products', {
+            const response = await fetch('http://localhost:3000/products' + query, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -41,20 +41,21 @@ export const getProductAction = (query) => {
 };
 
 
-export const getUserAction = () => {
+export const getUsersAction = () => {
     return async (dispatch) => {
 
         try {
-            const response = await fetch('http://localhost:3000/products', {
+            const res = await fetch('http://localhost:3000/users', {
                 headers: {
                     'Content-Type': 'application/json',
                 },
             })
-            if (response.ok) {
-                let {data} = await response.json()
+            if (res.ok) {
+                let userData = await res.json()
+                console.log(userData)
                 dispatch({
-                    type: GET_PRODUCTS,
-                    payload: data,
+                    type: GET_USERS,
+                    payload: userData,
                 })
             } else {
                 console.log('error in fetching')
