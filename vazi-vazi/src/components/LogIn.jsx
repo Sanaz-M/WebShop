@@ -1,47 +1,32 @@
+import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { getUsersAction } from '../redux/action';
+import { useNavigate } from "react-router-dom";
 
-import { useState } from "react";
 
+const LogIn = () => {
 
-const App = () => {
+    const navigate = useNavigate()
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            let response = await fetch('http://localhost:3000/users', { 
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            })
-            if(response.ok){
-                let data = await response.json()
-                console.log(data)
-            }
-            if (password.length < 8) {
-                alert('Password is too short. More than 8 characters, please!')
-            }
-            // for(let i=0; i<=response.length; i++){
-            //     if(password === response[i].password && email === response[i].email){
-            //         alert('welcome')
-            //     }
-            // }
-        }
-        catch (err) {
-            console.error(err);
-        }
-    };
+    const usersResult = useSelector(state => state.users.content);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getUsersAction());
+    }, []);
+
 
     return (
         <div>
             <div className="justify-content-center">
                 <h1>Log In</h1>
             </div>
-            <form onSubmit={handleSubmit}>
+            <form>
                 <input
                     type="text"
                     value={email}
-                    placeholder="enter a username"
+                    placeholder="enter an email"
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <div>
@@ -54,10 +39,12 @@ const App = () => {
                 </div>
                 <button
                     type="submit"
-                    disabled={!email || !password}>Login</button>
+                    disabled={!email || !password}
+                    onClick = {() => navigate('/')}
+                    >Login</button>
             </form>
         </div>
     );
 };
 
-export default App;
+export default LogIn;

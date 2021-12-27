@@ -50,6 +50,20 @@
       "password": "RmH.k6ueQ2@S55Z",
       "password2": "RmH.k6ueQ2@S55Z",
       "id": "P0-rNnN"
+    },
+    {
+      "name": "john doe",
+      "email": "johndoe@gmail.com",
+      "password": "ckcePcSgy6Cg@y8",
+      "password2": "ckcePcSgy6Cg@y8",
+      "id": "oYLvjvu"
+    },
+    {
+      "name": "David",
+      "email": "david@gmail.com",
+      "password": "fUpFZR.6XSWjZwF",
+      "password2": "fUpFZR.6XSWjZwF",
+      "id": "hba5Jit"
     }
   ]
 }

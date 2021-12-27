@@ -1,12 +1,13 @@
 import '../styles/register.css'
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { Fragment, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import RegisterPhoto from '../assets/register-photo2.jpg';
 
 
 const Registration = () => {
-
+    
+    const navigate = useNavigate()
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -40,6 +41,7 @@ const Registration = () => {
             }
             if (response.ok) {
                 let data = await response.json()
+                console.log(data)
                 return data
             }
             // else if (!email.includes(/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/)) {
@@ -111,9 +113,11 @@ const Registration = () => {
                                 disabled={!email || !name || !password || !password2}
                                 onSubmit={onChange}
                                 type='submit'
-                                className='btn-registeration'>
+                                className='btn-registeration'
+                                onClick = {() => navigate('/')}>
                                 Register
                             </button>
+                            
                         </form>
                         <p className='my-3'>
                             <span id="login-question">Already have an account? </span><Link to='/login' className="link-login ml-2"><span className="white-text">Sign In</span></Link>

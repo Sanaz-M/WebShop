@@ -4,10 +4,13 @@ import Logo from '../assets/logo.png';
 import { useState, useEffect } from 'react';
 import { getProductAction } from '../redux/action';
 import { useDispatch } from 'react-redux';
+import { useParams } from "react-router-dom"
 
 
 const MyNavBar = () => {
     const [query, setQuery] = useState('');
+    const params = useParams();
+
 
     const searchChange = (e) => {
         setQuery(e.target.value)
@@ -58,6 +61,7 @@ const MyNavBar = () => {
                     </Form>
                     <Link to="/deets"><span>Blog</span></Link>
                     <Link eventKey={2} to="/memes"><span>Contact</span></Link>
+                    <div>user</div>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
