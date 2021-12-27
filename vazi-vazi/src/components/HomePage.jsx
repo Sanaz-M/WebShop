@@ -47,7 +47,7 @@ const HomePage = () => {
 
       <ListGroup as="ul">
                         {
-                            productsResult.length > 0 && productsResult.map((product) => (
+                            productsResult?.length > 0 && productsResult.map((product) => (
 
                                 <ListGroup.Item
                                     key={product.id}

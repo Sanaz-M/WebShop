@@ -3,14 +3,14 @@ import thunk from 'redux-thunk'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import { encryptTransform } from 'redux-persist-transform-encrypt'
-import productsReducer from '../reducers/products'
+import productsReducer from '../reducers/products.js'
 
 const aComposeThatAlwaysWorks = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 export const initialState = {
 
   products: {
-    result: [],
+    result: [{}],
     isError: false,
     isLoading: true,
     query: 'bag'
@@ -29,7 +29,7 @@ const persistConfig = {
 }
 
 const bigReducer = combineReducers({
-  products: productsReducer
+  products: productsReducer,
 })
 
 const persistedBigReducer = persistReducer(persistConfig, bigReducer)

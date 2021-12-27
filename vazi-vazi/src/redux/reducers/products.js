@@ -1,5 +1,5 @@
 import { initialState } from '../store/index'
-import { GET_PRODUCTS, TOGGLE_LOADER, SEARCH_QUERY } from '../action'
+import { GET_PRODUCTS, TOGGLE_LOADER, SEARCH_QUERY } from '../action/index'
 
 
 const productsReducer = (state = initialState.products, action) => {
