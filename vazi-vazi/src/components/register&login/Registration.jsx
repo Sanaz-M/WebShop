@@ -6,7 +6,7 @@ import RegisterPhoto from '../../assets/register-photo3.png';
 
 
 const Registration = () => {
-    
+
     const navigate = useNavigate()
     const [formData, setFormData] = useState({
         name: "",
@@ -18,22 +18,6 @@ const Registration = () => {
     const { name, email, password, password2 } = formData;
 
     const onChange = (e) => { setFormData({ ...formData, [e.target.name]: e.target.value }); }
-
-    const registerAlert = () => {
-
-        <Alert variant="success">
-          <Alert.Heading>Hey, nice to see you</Alert.Heading>
-          <p>
-            Aww yeah, you successfully read this important alert message. This example
-            text is going to run a bit longer so that you can see how spacing within an
-            alert works with this kind of content.
-          </p>
-          <hr />
-          <p className="mb-0">
-          <Button variant="outline-success" onClick={() => navigate('/')}>Go to Home!</Button>
-          </p>
-        </Alert>
-    }
 
 
     const fetchAndSubmit = async (e) => {
@@ -63,7 +47,7 @@ const Registration = () => {
             // }
             else {
                 return setFormData
-               
+
             }
 
         }
@@ -127,10 +111,17 @@ const Registration = () => {
                                 onSubmit={onChange}
                                 type='submit'
                                 className='btn-registeration'
-                                >
+                                onClick={() => {
+                                    alert(
+                                        `Thank you ${name}`
+                                    )
+                                }
+
+                                }
+                            >
                                 Register
                             </button>
-                            
+
                         </form>
                         <p className='my-3'>
                             <span id="login-question">Already have an account? </span><Link to='/login' className="link-login ml-2"><span className="white-text">Sign In</span></Link>
