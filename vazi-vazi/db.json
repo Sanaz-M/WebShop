@@ -64,6 +64,34 @@
       "password": "fUpFZR.6XSWjZwF",
       "password2": "fUpFZR.6XSWjZwF",
       "id": "hba5Jit"
+    },
+    {
+      "name": "Ronald",
+      "email": "ronald@gmail.com",
+      "password": "6$bqo9A3dq4C",
+      "password2": "6$bqo9A3dq4C",
+      "id": "BKcbLj1"
+    },
+    {
+      "name": "Miranda",
+      "email": "miranda@gmail.com",
+      "password": "6$bqo9A3dq4C22",
+      "password2": "6$bqo9A3dq4C22",
+      "id": "At6Y2Ja"
+    },
+    {
+      "name": "Miranda",
+      "email": "miranda@gmail.com",
+      "password": "6$bqo9A3dq4C22",
+      "password2": "6$bqo9A3dq4C22",
+      "id": "KWwMHce"
+    },
+    {
+      "name": "Elis",
+      "email": "elis@gmail.com",
+      "password": "12345678",
+      "password2": "12345678",
+      "id": "YNFGilK"
     }
   ]
 }
