@@ -11,7 +11,6 @@ const MyNavBar = () => {
     const [query, setQuery] = useState('');
     const params = useParams();
 
-
     const searchChange = (e) => {
         setQuery(e.target.value)
     }
