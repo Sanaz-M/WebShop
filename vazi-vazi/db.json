@@ -3,12 +3,13 @@
     {
       "id": "101",
       "category": "shoes",
+      "design": "men",
       "name": "shoe1",
       "price": "190",
       "origin": "Italy",
       "size": "40",
       "composition": "80% Leather, 20% Polyester",
-      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "image": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80g",
       "comments": {
         "rate": "4.5",
         "comment": "I like it!"
@@ -17,15 +18,46 @@
     {
       "id": "102",
       "category": "shoes",
+      "design": "woman",
       "name": "shoe2",
-      "price": "190",
+      "price": "400",
       "origin": "France",
-      "size": "40",
+      "size": "38",
       "composition": "80% Leather, 20% Polyester",
-      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "comments": {
         "rate": "4.5",
         "comment": "I like it!"
+      }
+    },
+    {
+      "id": "103",
+      "category": "bag",
+      "design": "woman",
+      "name": "bag1",
+      "price": "220",
+      "origin": "Spain",
+      "size": "30 x 12",
+      "composition": "80% Leather, 20% Polyester",
+      "image": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+      "comments": {
+        "rate": "4",
+        "comment": "Good quality."
+      }
+    },
+    {
+      "id": "104",
+      "category": "bag",
+      "design": "men",
+      "name": "bag2",
+      "price": "200",
+      "origin": "Spain",
+      "size": "40 x 25",
+      "composition": "80% Leather, 20% Polyester",
+      "image": "https://images.unsplash.com/photo-1525103504173-8dc1582c7430?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
+      "comments": {
+        "rate": "4",
+        "comment": "Good quality."
       }
     }
   ],

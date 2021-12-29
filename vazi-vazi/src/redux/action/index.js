@@ -45,7 +45,7 @@ export const getUsersAction = () => {
     return async (dispatch) => {
 
         try {
-            const res = await fetch('http://localhost:3000/users', {
+            const res = await fetch('http://localhost:3000/users/', {
                 headers: {
                     'Content-Type': 'application/json',
                 },
