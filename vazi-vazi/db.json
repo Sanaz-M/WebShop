@@ -32,7 +32,7 @@
     },
     {
       "id": "103",
-      "category": "bag",
+      "category": "bags",
       "design": "woman",
       "name": "bag1",
       "price": "220",
@@ -47,7 +47,7 @@
     },
     {
       "id": "104",
-      "category": "bag",
+      "category": "bags",
       "design": "men",
       "name": "bag2",
       "price": "200",
@@ -57,6 +57,21 @@
       "image": "https://images.unsplash.com/photo-1525103504173-8dc1582c7430?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
       "comments": {
         "rate": "4",
+        "comment": "Good quality."
+      }
+    },
+    {
+      "id": "105",
+      "category": "shoes",
+      "design": "men",
+      "name": "shoe3",
+      "price": "375",
+      "origin": "USA",
+      "size": "44",
+      "composition": "80% Leather, 20% Polyester",
+      "image": "https://images.unsplash.com/photo-1550399865-ec7d23b18e8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=394&q=80",
+      "comments": {
+        "rate": "4.4",
         "comment": "Good quality."
       }
     }

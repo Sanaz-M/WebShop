@@ -63,12 +63,12 @@ const HomePage = () => {
           <Row>
             {
               productsResult?.length > 0 && productsResult.map((product) => (
-                <Col>
+                <Col className="m-1">
                   {/* className="d-flex justify-content-between align-items-start" */}
 
                   <div className="ms-2 me-auto" key={product.id}>
                     <div>
-                      <img src={product.image} alt='shoe' width='100' height='100' /></div>
+                      <img src={product.image} alt='shoe' width='300' height='300' /></div>
                   </div>
                   <div className="fw-bold">{product.category}</div>
                   <div>{product.name}</div>

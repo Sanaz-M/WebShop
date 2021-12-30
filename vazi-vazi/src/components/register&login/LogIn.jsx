@@ -18,30 +18,36 @@ const LogIn = () => {
 
 
     return (
-        <div>
+        <div id='login-container'>
             <div className="justify-content-center">
                 <h1>Log In</h1>
             </div>
-            <form>
-                <input
-                    type="text"
-                    value={email}
-                    placeholder="enter an email"
-                    onChange={(e) => setEmail(e.target.value)}
-                />
+            <form id='login-form'>
                 <div>
                     <input
+                        className="login-form-control"
+                        type="text"
+                        value={email}
+                        placeholder="enter an email"
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                </div>
+                <div>
+                    <input
+                        className="login-form-control"
                         type="password"
                         value={password}
                         placeholder="enter a password"
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
-                <button
-                    type="submit"
-                    disabled={!email || !password}
-                    onClick = {() => navigate('/')}
-                    >Login</button>
+                    <button
+                    className="mt-2 login-button"
+                        type="submit"
+                        disabled={!email || !password}
+                        onClick={() => navigate('/')}
+                    >
+                        Let's login!</button>
             </form>
         </div>
     );

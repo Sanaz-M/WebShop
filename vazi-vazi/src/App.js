@@ -2,6 +2,7 @@ import './App.css';
 import '../src/styles/register.css';
 import '../src/styles/HomePage.css'
 import '../src/styles/MyNavBar.css';
+import '../src/styles/login.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Registration from './components/register&login/Registration';
