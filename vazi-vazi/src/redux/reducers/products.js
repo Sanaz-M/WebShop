@@ -12,7 +12,7 @@ const productsReducer = (state = initialState.products, action) => {
         case SEARCH_QUERY:
             return {
                 ...state,
-                query: action.payload
+                query: action.payload,
             }
         case TOGGLE_LOADER:
             return {
