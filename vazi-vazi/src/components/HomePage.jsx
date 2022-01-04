@@ -3,7 +3,8 @@ import MyNavBar from './MyNavBar';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getProductAction } from '../redux/action';
-import Footer from './Footer'
+import Footer from './Footer';
+import JumbotronVideo from '../assets/shoe&bag.mp4'
 
 
 const HomePage = () => {
@@ -28,7 +29,11 @@ const HomePage = () => {
           <MyNavBar />
 
           <Jumbotron id="Jumbotron1">
+              <video autoPlay muted loop id="jumbotronVideo">
+                <source src={JumbotronVideo} type="video/mp4" />
+              </video>
             <h1>Vazi Vazi</h1>
+
             <p>
               Your Style Assistant!
             </p>
