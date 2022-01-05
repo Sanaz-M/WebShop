@@ -11,14 +11,11 @@ const Admin = () => {
                 <AdminNavBar />
             </Row>
             <Row id='admin-secondRow'>
-                <Col md={2}>
+                <Col ms={6} md={2}>
                     <SideBar />
                 </Col>
-                <Col md={10}>
-                    {/* <Row> */}
+                <Col ms={6} md={10} className='mainSec-home'>
                         <AdminHome />
-                    {/* </Row> */}
-                    
                 </Col>
             </Row>
         </Container>

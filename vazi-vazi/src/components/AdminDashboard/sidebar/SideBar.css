@@ -2,16 +2,21 @@
     flex: 1;
     background-color: #0f010f;
     position: sticky;
-    top: 50px;
+    top: 60px;
     color: rgb(182, 180, 180);
     padding: 12px;
-    border-radius: 15px;
+    border-radius: 20px;
   }
   
   .sidebarMenu {
     margin-bottom: 10px;
   }
   
+  .logo-section{
+    display: flex;
+    align-items: center;
+  }
+
   .sidebarTitle {
     font-size: 15px;
     color: rgb(187, 186, 186);

@@ -7,8 +7,9 @@ import { Link } from "react-router-dom";
 
 const AdminNavBar = () => {
   return (
-    <Navbar id='admin-navbar'>
-      <Link to="/"><img src={Logo} alt="logo" width='70' height='70' /></Link>
+    <Navbar fixed="top" id='admin-navbar'>
+      {/* <Link to="/"><h2>Vazi Vazi</h2></Link> */}
+      {/* <Link to="/"><img src={Logo} alt="logo" width='70' height='70' /></Link> */}
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
