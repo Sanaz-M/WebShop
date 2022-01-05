@@ -1,0 +1,10 @@
+#admin-container{
+padding:0;
+background: rgb(96,30,80);
+background: linear-gradient(180deg, rgba(96,30,80,1) 0%, rgba(46,16,40,1) 56%, rgba(33,14,30,1) 100%);
+color: rgb(182, 180, 180);
+}
+
+.row{
+    margin-right: 0;
+}
