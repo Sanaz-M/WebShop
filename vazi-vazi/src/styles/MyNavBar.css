@@ -1,6 +1,19 @@
 #myNavbar{
     font-family: 'Quicksand', sans-serif;
     padding: 0;
+    padding-right: 10px;
     font-weight: bold;
-    color: purple;
+    color: white;
+    margin-bottom: 25px;
+    position: fixed;
+    top: 0;
+    background-color: rgba(24, 23, 23, 0.26);
+}
+
+.gender{
+    align-items: center;
+}
+
+#collasible-nav-dropdown{
+    color: white;
 }

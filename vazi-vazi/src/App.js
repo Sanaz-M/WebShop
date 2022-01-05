@@ -1,8 +1,6 @@
 import './App.css';
-import '../src/styles/register.css';
 import '../src/styles/HomePage.css'
 import '../src/styles/MyNavBar.css';
-import '../src/styles/login.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Registration from './components/register&login/Registration';
@@ -11,7 +9,6 @@ import LogIn from './components/register&login/LogIn';
 import Contact from './components/Contact';
 import ShoppingCart from './components/ShoppingCart';
 import Admin from './components/AdminDashboard/Admin';
-import { Container } from 'react-bootstrap';
 
 
 function App() {

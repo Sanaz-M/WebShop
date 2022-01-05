@@ -6,8 +6,12 @@
     height: 500px;
 }
 
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{
+    padding-right: 0!important;
+}
+
 .homepage-main{
-    margin: 0;
+    padding: 0;
 }
 
 #jumbotronVideo {
@@ -16,4 +20,5 @@
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
+    object-fit: cover;
   }

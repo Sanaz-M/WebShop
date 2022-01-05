@@ -1,0 +1,59 @@
+#home-cards{
+  display: flex;
+  flex-direction: row;
+}
+
+.adminHome-card{
+    background-color: #2b042b;
+    color: rgb(182, 180, 180);
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(175, 29, 131, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(179, 41, 160, 0.75);
+    border-radius: 15px;
+    transition: background-color 0.2s ease;
+
+}
+
+.adminHome-card:hover{
+    background-color: #2b042b79;
+}
+
+.card-bodyText{
+    display: flex;
+    font-size: 25px;
+    font-weight: 600;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.changeRate{
+    font-size: 15px;
+}
+  
+.chartIcon{
+      font-size: 14px;
+      margin-left: 5px;
+      color: green;
+}
+  
+.chartIcon.negative{
+      color: red;
+}
+
+.chart {
+    margin: 20px;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(235, 78, 214, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(192, 81, 177, 0.75);
+    width: 100%;
+    border-radius:5px;
+}
+  
+  .chartTitle {
+    margin-bottom: 20px;
+}
+
+.chart-secondRow{
+    height: 500px;
+    margin-top: 20px;
+}

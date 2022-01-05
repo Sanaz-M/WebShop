@@ -4,6 +4,8 @@ import Logo from '../assets/logo.png';
 import { useState, useEffect } from 'react';
 import { getProductAction } from '../redux/action';
 import { useDispatch } from 'react-redux';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 
 
@@ -26,9 +28,9 @@ const MyNavBar = () => {
             {/* <Link to="/"><p>Vazi Vazi</p></Link> */}
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="mr-auto">
-                    <Link to="/features"><span>Women</span></Link>
-                    <Link to="/pricing"><span>Men</span></Link>
+                <Nav className="mr-auto gender">
+                    <Link to="/features"><span className='mr-2 text-white'>Women</span></Link>
+                    <Link to="/pricing"><span className='text-white'>Men</span></Link>
                     <NavDropdown title="Collections" id="collasible-nav-dropdown">
                         <Link to='/action/3.1'>
                             <NavDropdown.Item><span>Bags</span></NavDropdown.Item>
@@ -57,9 +59,10 @@ const MyNavBar = () => {
                             />
                         </Form.Group>
                     </Form>
-                    <Link to="/deets"><span>Blog</span></Link>
-                    <Link eventKey={2} to="/memes"><span>Contact</span></Link>
-                    <div>user</div>
+                    <Link to="/blog"><span className='mr-2 text-white'>Blog</span></Link>
+                    <Link eventKey={2} to="/contact-us"><span className='mr-2 text-white'>Contact</span></Link>
+                    <Link to='/register'><span className='mr-1 text-white'><AccountCircleIcon /></span></Link>
+                    <Link to='/shopping-cart'><span className='text-white'><AddShoppingCartIcon /></span></Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

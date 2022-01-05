@@ -1,6 +1,6 @@
 import '../../styles/register.css'
-import { Container, Row, Col, Button } from "react-bootstrap";
-import { Fragment, useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { Fragment, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import RegisterPhoto from '../../assets/register-photo3.png';
 
