@@ -10,7 +10,6 @@ import Contact from './components/Contact';
 import ShoppingCart from './components/ShoppingCart';
 import Admin from './components/AdminDashboard/Admin';
 
-
 function App() {
   return (
     <BrowserRouter>

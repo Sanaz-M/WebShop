@@ -1,7 +1,7 @@
 import { LineChart, Line, XAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 
 
-const Chart = ({ title, data, dataKey, grid }) => {
+const UserChart = ({ title, data, dataKey, grid }) => {
 
     return (
         <div className="chart">
@@ -19,4 +19,4 @@ const Chart = ({ title, data, dataKey, grid }) => {
     );
 }
 
-export default Chart
+export default UserChart

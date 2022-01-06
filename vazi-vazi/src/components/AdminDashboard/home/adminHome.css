@@ -57,3 +57,37 @@
     height: 500px;
     margin-top: 20px;
 }
+
+#adminHome-trafic{
+    color: black;
+    align-items:center;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(235, 78, 214, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(192, 81, 177, 0.75);
+}
+
+.trafic-bodyText{
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+    align-items: baseline;
+    justify-content: center; 
+}
+
+.communication-channel{
+    font-size: 12px;
+}
+
+.blueDot{
+    font-size:10px !important;
+    color: #0088FE;
+}
+
+.pinkDot{
+    font-size:10px !important;
+    color: #d40064;
+}
+
+.greenDot{
+    font-size: 10px !important;
+    color: #1b9b5c;
+}
