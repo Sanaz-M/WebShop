@@ -1,0 +1,8 @@
+#admin-userList{
+    display: flex;
+    flex-direction: row;
+}
+
+.table{
+    color: black;
+}

@@ -1,6 +1,6 @@
 import '../home/adminHome.css'
 import { ArrowDownward, ArrowUpward } from "@material-ui/icons";
-import { Row, Col, Card } from 'react-bootstrap';
+import { Row, Col, Card, Table, Badge } from 'react-bootstrap';
 import UserChart from './UserChart';
 import { userData } from '../../../dataForAdminChart';
 import ChannelPieChart from './ChannelPieChart';
@@ -8,11 +8,12 @@ import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 
 const AdminHome = () => {
+
     return (
-        <>
+        <div id='admin-home-main'>
             {/* First part -- Cards */}
             <Row id='home-cards'>
-                <Col ms={6} md={3}>
+                <Col sm={6} md={3}>
                     <Card className='adminHome-card'>
                         <Card.Body>
                             <Card.Title>Revanue</Card.Title>
@@ -26,7 +27,7 @@ const AdminHome = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col ms={6} md={3}>
+                <Col sm={6} md={3}>
                     <Card className='adminHome-card'>
                         <Card.Body>
                             <Card.Title>Sales</Card.Title>
@@ -40,7 +41,7 @@ const AdminHome = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col ms={6} md={3}>
+                <Col sm={6} md={3}>
                     <Card className='adminHome-card'>
                         <Card.Body>
                             <Card.Title>Cost</Card.Title>
@@ -54,7 +55,7 @@ const AdminHome = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col ms={6} md={3}>
+                <Col sm={6} md={3}>
                     <Card className='adminHome-card'>
                         <Card.Body>
                             <Card.Title>New Users</Card.Title>
@@ -72,27 +73,24 @@ const AdminHome = () => {
 
             {/* Second part -- Charts */}
             <Row className="chart-secondRow">
-                <Col md={8}>
-                <UserChart data={userData} title="User Analytics" grid dataKey="Active User" />
+                <Col sm={12} lg={8}>
+                    <UserChart data={userData} title="User Analytics" grid dataKey="Active User" year='2021' />
                 </Col>
-                <Col md={4}>
+                <Col sm={12} lg={4}>
                     <Card id='adminHome-trafic'>
-
                         <Card.Body>
                             <Row>
                                 <Card.Title>Trafic</Card.Title>
-                                <ChannelPieChart />
                             </Row>
                             <Row className="trafic-bodyText">
-                            <Col md={4}>
+                                <Row>
+                                    <ChannelPieChart />
+                                </Row>
+                                <Row>
                                     <div>12%<div className="communication-channel mr-2"><FiberManualRecordIcon className='greenDot' />Direct Search</div></div>
-                                </Col>
-                                <Col md={4}>
                                     <div>38%<div className="communication-channel mr-2"><FiberManualRecordIcon className='blueDot' />Facebook</div></div>
-                                </Col>
-                                <Col md={4}>
                                     <div>50%<div className="communication-channel mr-2"><FiberManualRecordIcon className='pinkDot' />Instagram</div></div>
-                                </Col>
+                                </Row>
                             </Row>
                         </Card.Body>
                     </Card>
@@ -103,6 +101,44 @@ const AdminHome = () => {
 
             {/* Third part -- some additional info */}
             <Row>
+                <Col id='adminHome-order'>
+                    <h2>Order Status</h2>
+                    <h6>Latest Month</h6>
+                    <Table responsive="sm">
+                        <thead>
+                            <tr id='adminTable-Heading'>
+                                <th>Invoice</th>
+                                <th>Customer</th>
+                                <th>Location</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10290</td>
+                                <td>John Doe</td>
+                                <td>London</td>
+                                <td>€520</td>
+                                <td><h4><Badge variant="primary">Open</Badge></h4></td>
+                            </tr>
+                            <tr>
+                                <td>10291</td>
+                                <td>Maria Flex</td>
+                                <td>Lisbon</td>
+                                <td>€260</td>
+                                <td><h4><Badge variant="warning">Process</Badge></h4></td>
+                            </tr>
+                            <tr>
+                                <td>10292</td>
+                                <td>Flor Van Dijk</td>
+                                <td>Amsterdam</td>
+                                <td>€600</td>
+                                <td><h4><Badge variant="success">Done</Badge></h4></td>
+                            </tr>
+                        </tbody>
+                    </Table>
+                </Col>
                 {/* <Card id='adminHome-order'>
                         <Card.Body>
                             <Card.Title>Order Status</Card.Title>
@@ -117,7 +153,7 @@ const AdminHome = () => {
                     </Card> */}
 
             </Row>
-        </>
+        </div>
     );
 }
 

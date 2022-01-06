@@ -15,6 +15,9 @@ const UserChart = ({ title, data, dataKey, grid }) => {
                     {grid && <CartesianGrid stroke="rgb(131 131 131 / 58%)" strokeDasharray="5 5" />}
                 </LineChart>
             </ResponsiveContainer>
+            <h6 className="mt-3 low-opacity">2021
+                Monthly report
+            </h6>
         </div>
     );
 }
