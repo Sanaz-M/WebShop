@@ -1,7 +1,7 @@
 import { LineChart, Line, XAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 
 
-const Chart = ({ title, data, dataKey, grid }) => {
+const UserChart = ({ title, data, dataKey, grid }) => {
 
     return (
         <div className="chart">
@@ -15,8 +15,11 @@ const Chart = ({ title, data, dataKey, grid }) => {
                     {grid && <CartesianGrid stroke="rgb(131 131 131 / 58%)" strokeDasharray="5 5" />}
                 </LineChart>
             </ResponsiveContainer>
+            <h6 className="mt-3 low-opacity">2021
+                Monthly report
+            </h6>
         </div>
     );
 }
 
-export default Chart
+export default UserChart

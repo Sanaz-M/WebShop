@@ -9,7 +9,7 @@ import LogIn from './components/register&login/LogIn';
 import Contact from './components/Contact';
 import ShoppingCart from './components/ShoppingCart';
 import Admin from './components/AdminDashboard/Admin';
-
+import UserList from './components/AdminDashboard/user/UserList';
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/shopping-cart" element={<ShoppingCart />} />
           <Route path="/admin-dashboard" element={<Admin />} />
+          <Route path="/admin-dashboard/userlist" element={<UserList />} />
         </Routes>
       </div>
 

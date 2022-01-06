@@ -15,7 +15,7 @@ const Admin = () => {
                     <SideBar />
                 </Col>
                 <Col ms={6} md={10} className='mainSec-home'>
-                        <AdminHome />
+                    <AdminHome />
                 </Col>
             </Row>
         </Container>
