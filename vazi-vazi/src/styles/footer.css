@@ -1,0 +1,107 @@
+#footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 50px 20px;
+    background-color: #230e1f;
+  }
+  
+  /* first row */
+  #footer-first-row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-cols {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+  }
+  
+  .footer-cols a {
+    margin-bottom: 1rem;
+  }
+  
+  #footer a {
+    color: rgba(238, 238, 238, 0.658);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  #footer i {
+    font-size: 1.6rem;
+    color: rgba(238, 238, 238, 0.658);
+    display: inline-block;
+    margin-right: 17px;
+  }
+
+.footer-sectionHeading{
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(238, 238, 238, 0.747);
+    font-size: 15px;
+}
+
+.footer-contactUs-details{
+    color: rgba(238, 238, 238, 0.658);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-icons{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.icon {
+    font-size: 18px;
+    color: rgba(238, 238, 238, 0.658);
+    margin-right: 10px;
+}
+
+#newsletter-btn{
+    background-color: #f5005686;
+    color: rgba(238, 238, 238, 0.849);
+    width: 80%;
+    border-radius:40px;
+    font-weight: 600;
+    height: 50%;
+    transition: background-color 0.3s ease;
+}
+
+#newsletter-btn:hover{
+    background-color: #f50056cc;
+    color: rgba(238, 238, 238, 0.849);
+    width: 80%;
+    border-radius:40px;
+    font-weight: 600;
+    height: 50%;
+}
+
+.MuiInput-underline {
+    border-bottom: 1px solid rgba(238, 238, 238, 0.658);
+    margin-bottom:10px;
+}
+
+
+.MuiFormLabel-root{
+    color: rgba(238, 238, 238, 0.658)!important;
+}
+
+
+/* second row */
+#footer-second-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    align-items: flex-end;
+}
+
+#footer-last-line{
+    color: rgba(238, 238, 238, 0.658);
+    font-size: 12px;
+}
+
+.MuiSvgIcon-root.footer-heart-icon{
+    width: 15px !important;
+    color: red;
+}

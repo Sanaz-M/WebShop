@@ -3,11 +3,12 @@
     background-repeat:no-repeat;
     background-size: cover;
     margin: 0;
-    height: 500px;
+    height: 700px;
 }
 
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{
     padding-right: 0!important;
+    padding-left: 0!important;
 }
 
 .homepage-main{
