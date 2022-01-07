@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getProductAction } from '../redux/action';
 import Footer from './Footer';
-import JumbotronVideo from '../assets/shoe&bag.mp4'
+import JumbotronVideo from '../assets/shoe&bag.mp4';
 
 
 const HomePage = () => {
@@ -43,8 +43,8 @@ const HomePage = () => {
           </Jumbotron>
         </Col>
       </Row>
-      {/* sorting nav */}
 
+      {/* sorting nav */}
       <Row>
         <Col md={2}>
           <Form>
@@ -68,10 +68,10 @@ const HomePage = () => {
           <Row>
             {
               productsResult?.length > 0 && productsResult.map((product) => (
-                <Col className="m-1">
+                <Col className="m-1" key={product.id}>
                   {/* className="d-flex justify-content-between align-items-start" */}
 
-                  <div className="ms-2 me-auto" key={product.id}>
+                  <div className="ms-2 me-auto">
                     <div>
                       <img src={product.image} alt='shoe' width='300' height='300' /></div>
                   </div>
@@ -85,12 +85,7 @@ const HomePage = () => {
           </Row>
         </Col>
       </Row>
-      <Row>
-        <Col>
           <Footer />
-        </Col>
-
-      </Row>
     </Container>
   )
 }
