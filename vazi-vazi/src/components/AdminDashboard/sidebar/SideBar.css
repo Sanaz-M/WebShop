@@ -1,10 +1,13 @@
 #sidebar {
     flex: 1;
-    background-color: #0f010f;
-    position: sticky;
+    background-color: rgb(255 106 216 / 9%);
     color: rgb(182, 180, 180);
     padding: 12px;
-    border-radius: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    flex-flow: column nowrap;
+    align-items: flex-start;
   }
   
   .sidebarMenu {

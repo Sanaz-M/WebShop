@@ -7,7 +7,7 @@ export const getProductAction = (query) => {
     return async (dispatch) => {
 
         try {
-            const response = await fetch('http://localhost:3000/products/' + query, {
+            const response = await fetch(`http://localhost:3000/products?q=${query}`, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -41,11 +41,11 @@ export const getProductAction = (query) => {
 };
 
 
-export const getUsersAction = () => {
+export const getUsersAction = (userQuery) => {
     return async (dispatch) => {
 
         try {
-            const res = await fetch('http://localhost:3000/users/', {
+            const res = await fetch(`http://localhost:3000/users?q=${userQuery}`, {
                 headers: {
                     'Content-Type': 'application/json',
                 },

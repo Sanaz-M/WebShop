@@ -4,19 +4,15 @@
 }
 
 .adminHome-card{
-    background-color: #2b042b;
+    background: rgb(255 106 216 / 9%);
     color: rgb(182, 180, 180);
     cursor: pointer;
-    -webkit-box-shadow: 0px 0px 15px -8px rgba(175, 29, 131, 0.75);
-    box-shadow: 0px 0px 15px -8px rgba(179, 41, 160, 0.75);
     border-radius: 15px;
-    transition: background-color 0.2s ease;
-    
-
 }
 
 .adminHome-card:hover{
-    background-color: #2b042b79;
+    background: rgb(117,46,100);
+    background: linear-gradient(180deg, rgba(117,46,100,1) 0%, rgba(96,30,80,1) 56%, rgba(68,2,57,1) 100%);
 }
 
 .card-bodyText{
