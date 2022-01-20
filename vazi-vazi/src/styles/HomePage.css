@@ -1,11 +1,3 @@
-#Jumbotron1{
-    color: black;
-    background-repeat:no-repeat;
-    background-size: cover;
-    margin: 0;
-    height: 700px;
-}
-
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{
     padding-right: 0!important;
     padding-left: 0!important;
@@ -15,6 +7,15 @@
     padding: 0;
 }
 
+/* Jumbotron */
+#Jumbotron1{
+    color: black;
+    background-repeat:no-repeat;
+    background-size: cover;
+    margin: 0;
+    height: 720px;
+}
+
 #jumbotronVideo {
     position: absolute;
     right: 0;
@@ -22,4 +23,58 @@
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
-  }
+}
+
+
+/* main cards (first row of cards) */
+#main-card-row{
+margin: 40px 0px;
+display: flex;
+justify-content: center;
+}
+
+.main-first-cards{
+    height: 550px;
+    object-fit: cover;
+}
+
+#women-collection-card{
+    background-image: url('../assets/homepage-photo1.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    object-fit: fill;
+}
+
+.firstCard-text{
+background-color: rgba(255, 255, 255, 0.671);
+display: flex;
+flex-direction: column;
+opacity: 0;
+}
+
+.main-first-cards:hover .firstCard-text{
+    opacity: 1;
+}
+
+#firstCards-btn{
+color: rgba(255, 255, 255, 0.);
+}
+
+#off-collection-card{
+    background-image: url('../assets/homepage-discount.jpg');
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+#men-collection-card{
+    background-image: url('../assets/homepage-photo2.jpg');
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+
+
+.MuiPaginationItem-page.Mui-selected {
+    background-color: #9c27b0 !important;
+}

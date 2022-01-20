@@ -8,6 +8,7 @@
     bottom: 0;
     flex-flow: column nowrap;
     align-items: flex-start;
+    overflow: auto;
   }
   
   .sidebarMenu {
@@ -57,3 +58,22 @@
     text-decoration: none;
     color: rgb(212, 199, 199);
   }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+::-webkit-scrollbar-track {/* Track */
+    background: rgb(255 106 216 / 9%); 
+}
+   
+
+::-webkit-scrollbar-thumb {/* Handle */
+    background: rgb(255 106 216 / 9%); 
+    border-radius: 0;
+}
+  
+
+::-webkit-scrollbar-thumb:hover { /* Handle on hover */
+    background: rgb(73, 42, 69); 
+}

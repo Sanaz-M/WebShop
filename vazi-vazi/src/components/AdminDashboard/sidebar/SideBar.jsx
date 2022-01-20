@@ -22,10 +22,12 @@ const SideBar = () => {
     <div id="sidebar">
       <div className="sidebarMenu">
         <span className="logo-section">
-          <img src={Logo} alt="logo" width='70' height='70' />
-        <h2 className="sidebarTitle">Dashboard</h2>
+          <Link to='/'>
+            <img src={Logo} alt="logo" width='70' height='70' />
+            <h2 className="sidebarTitle">Dashboard</h2>
+          </Link>
         </span>
-      
+
         <ul className="sidebarList">
           <Link to="/admin-dashboard" className="link">
             <li className="sidebarListItem">
@@ -52,7 +54,7 @@ const SideBar = () => {
               Users
             </li>
           </Link>
-          <Link to="/products" className="link">
+          <Link to="/admin-dashboard/productlist" className="link">
             <li className="sidebarListItem">
               <Storefront className="sidebarIcon" />
               Products
@@ -98,7 +100,7 @@ const SideBar = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </div >
   );
 }
 
