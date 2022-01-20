@@ -1,10 +1,12 @@
-import { Jumbotron, Button, Container, Form, Row, Col } from 'react-bootstrap'
+import { Jumbotron, Button, Container, Form, Row, Col, Card, Modal } from 'react-bootstrap'
 import MyNavBar from './MyNavBar';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getProductAction } from '../redux/action';
 import Footer from './Footer';
 import JumbotronVideo from '../assets/shoe&bag.mp4';
+import Pagination from '@material-ui/lab/Pagination';
+import womanCard from '../assets/homepage-photo2.jpg';
 
 
 const HomePage = () => {
@@ -29,9 +31,9 @@ const HomePage = () => {
           <MyNavBar />
 
           <Jumbotron id="Jumbotron1">
-              <video autoPlay muted loop id="jumbotronVideo">
-                <source src={JumbotronVideo} type="video/mp4" />
-              </video>
+            <video autoPlay muted loop id="jumbotronVideo">
+              <source src={JumbotronVideo} type="video/mp4" />
+            </video>
             <h1>Vazi Vazi</h1>
 
             <p>
@@ -44,13 +46,52 @@ const HomePage = () => {
         </Col>
       </Row>
 
-      {/* sorting nav */}
+      {/* main cards */}
+      <Row id="main-card-row">
+        <Col md={6} lg={3}>
+          <Card className='main-first-cards' id='women-collection-card'>
+            <Card.Body>
+            </Card.Body>
+            <div className='firstCard-text'>
+            <Card.Text>
+              Women's collection
+            </Card.Text>
+            <Button variant="primary" id='firstCards-btn'>Buy Now</Button>
+            </div>
+          </Card>
+        </Col>
+        <Col md={6} lg={3}>
+          <Card className='main-first-cards' id='off-collection-card'>
+            <Card.Body>
+            </Card.Body>
+            <div>
+            <Card.Text>
+              discount
+            </Card.Text>
+            <Button variant="primary" id='firstCards-btn'>Buy Now</Button>
+            </div>
+          </Card>
+        </Col>
+        <Col md={6} lg={3}>
+          <Card className='main-first-cards' id='men-collection-card'>
+            <Card.Body>
+            </Card.Body>
+            <div className='firstCard-text'>
+            <Card.Text>
+              Men's collection
+            </Card.Text>
+            <Button variant="primary" id='firstCards-btn'>Buy Now</Button>
+            </div>
+          </Card>
+        </Col>
+      </Row>
+
       <Row>
-        <Col md={2}>
+        {/* sorting nav */}
+        <Col md={1}>
           <Form>
             <Form.Group controlId="exampleForm.SelectCustomSizeSm">
               <Form.Control as="select" size="sm" custom>
-                <option>choose currency</option>
                 <option value='€'>Euro</option>
                 <option value='$'>Dollar</option>
               </Form.Control>
@@ -83,9 +124,10 @@ const HomePage = () => {
             }
 
           </Row>
+          <Pagination count={10} className="home-pagination" />
         </Col>
       </Row>
-          <Footer />
+      <Footer />
     </Container>
   )
 }

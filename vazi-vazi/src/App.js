@@ -10,6 +10,8 @@ import Contact from './components/Contact';
 import ShoppingCart from './components/ShoppingCart';
 import Admin from './components/AdminDashboard/Admin';
 import UserList from './components/AdminDashboard/user/UserList';
+import ProductList from './components/AdminDashboard/product/ProductList';
+import SingleUser from './components/AdminDashboard/user/SingleUser';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path="/shopping-cart" element={<ShoppingCart />} />
           <Route path="/admin-dashboard" element={<Admin />} />
           <Route path="/admin-dashboard/userlist" element={<UserList />} />
+          <Route path="/admin-dashboard/userlist/:userName" element={<SingleUser />} />
+          <Route path="/admin-dashboard/productlist" element={<ProductList />} />
         </Routes>
       </div>
 

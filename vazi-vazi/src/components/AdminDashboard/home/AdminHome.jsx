@@ -62,7 +62,7 @@ const AdminHome = () => {
                             <div className="card-bodyText mb-3">
                                 <span>50</span>
                                 <span className="changeRate">+1.7
-                                    <ArrowUpward className="featuredIcon" />
+                                    <ArrowUpward className="chartIcon" />
                                 </span>
                             </div>
                             <Card.Subtitle className="mb-2 text-muted">Compared to last month</Card.Subtitle>
@@ -136,22 +136,16 @@ const AdminHome = () => {
                                 <td>€600</td>
                                 <td><h4><Badge variant="success">Done</Badge></h4></td>
                             </tr>
+                            <tr>
+                                <td>10293</td>
+                                <td>Marco Colombo</td>
+                                <td>Rome</td>
+                                <td>€305</td>
+                                <td><h4><Badge variant="warning">Process</Badge></h4></td>
+                            </tr>
                         </tbody>
                     </Table>
                 </Col>
-                {/* <Card id='adminHome-order'>
-                        <Card.Body>
-                            <Card.Title>Order Status</Card.Title>
-                            <div className="card-bodyText mb-3">
-                                <span>50</span>
-                                <span className="changeRate">+1.7
-                                    <ArrowUpward className="featuredIcon" />
-                                </span>
-                            </div>
-                            <Card.Subtitle className="mb-2 text-muted">Compared to last month</Card.Subtitle>
-                        </Card.Body>
-                    </Card> */}
-
             </Row>
         </div>
     );

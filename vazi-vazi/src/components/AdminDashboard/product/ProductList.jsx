@@ -1,4 +1,4 @@
-import './userlist.css'
+
 import { Container, Col, Row, Table, Button } from 'react-bootstrap';
 import SideBar from '../sidebar/SideBar';
 import AdminNavBar from '../navbar/AdminNavBar';
@@ -6,37 +6,37 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getUsersAction } from '../../../redux/action';
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+import { getProductAction } from '../../../redux/action';
 
+const ProductList = () => {
 
-const UserList = () => {
-
-    const [userQuery, setUserQuery] = useState('')
-    const usersResult = useSelector(state => state.users.content);
+    const [query, setQuery] = useState('')
+    const productResult = useSelector(state => state.products.result);
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getUsersAction(userQuery));
-    }, [userQuery]);
+        dispatch(getProductAction(query));
+    }, [query]);
 
     const searchChange = (e) => {
-        setUserQuery(e.target.value)
+        setQuery(e.target.value)
     }
 
     const deletUser = async (id) => {
         try {
-            let response = await fetch(`http://localhost:3000/users/${id}`, {
+            let response = await fetch(`http://localhost:3000/products/${id}`, {
                 method: "DELETE",
                 headers: {
                     'Content-Type': 'application/json',
                 }
             });
             if (response.ok) {
-                alert("user deleted!");
+                alert("product deleted!");
             } else {
-                alert("user NOT deleted!");
+                alert("product NOT deleted!");
             }
         } catch (error) {
-            alert("user NOT deleted!");
+            alert("product NOT deleted!");
         }
     }
     return (
@@ -60,19 +60,19 @@ const UserList = () => {
                         </thead>
                         <tbody>
                             {
-                                usersResult?.length > 0 && usersResult.map((user) => (
+                                productResult?.length > 0 && productResult.map((product) => (
                     
                                     <tr>
                                         <td>1</td>
-                                        <td>{user.name}</td>
-                                        <td>{user.email}</td>
-                                        <td>{user.password}</td>
+                                        <td>{product.name}</td>
+                                        <td>{product.category}</td>
+                                        <td>{product.price}</td>
                                         <td>
-                                            <Link to={user.name}><Button variant="primary">Update</Button>
+                                            <Link to={product.id}><Button variant="primary">Update</Button>
                                             </Link>
                                             <Button
                                                 variant="danger"
-                                                onClick={() => deletUser(user.id)}
+                                                onClick={() => deletUser(product.id)}
                                              > Delete</Button></td>
                                     </tr>
                                 ))
@@ -85,4 +85,4 @@ const UserList = () => {
     )
 }
 
-export default UserList
+export default ProductList

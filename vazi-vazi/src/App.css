@@ -12,7 +12,7 @@
 
 #main-body{
   font-family: 'Quicksand', sans-serif;
-  background-color: #cccccc;
+  background-color: #cbb9ce;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -20,7 +20,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(15px + 1vmin);
-  color: white;
+  color: black;
   overflow: auto;
 }
 

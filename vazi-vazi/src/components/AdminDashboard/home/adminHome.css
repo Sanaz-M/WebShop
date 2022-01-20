@@ -4,7 +4,7 @@
 }
 
 .adminHome-card{
-    background: rgb(255 106 216 / 9%);
+    background: rgb(59, 19, 59);
     color: rgb(182, 180, 180);
     cursor: pointer;
     border-radius: 15px;
@@ -95,8 +95,8 @@
 
 #adminHome-order{
     margin-top:20px;
-    background-color:rgb(128, 75, 128);
-    color: #2b042b;
+    background-color:rgb(59, 19, 59);
+    color: rgb(182, 180, 180);
     border-radius: 10px;
     margin-bottom: 20px;
 }
