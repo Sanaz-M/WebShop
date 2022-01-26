@@ -1,4 +1,4 @@
-import '../../styles/register.css'
+import './register.css'
 import { Container, Row, Col } from "react-bootstrap";
 import { Fragment, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
