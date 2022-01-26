@@ -1,54 +1,64 @@
 export const userData = [
-    {
-      name: "Jan",
-      "Active User": 1000,
-      year: '2021'
-    },
-    {
-      name: "Feb",
-      "Active User": 2000,
-      year: '2021'
-    },
-    {
-      name: "Mar",
-      "Active User": 5000,
-      year: '2021'
-    },
-    {
-      name: "Apr",
-      "Active User": 4000,
-      year: '2021'
-    },
-    {
-      name: "May",
-      "Active User": 3000,
-    },
-    {
-      name: "Jun",
-      "Active User": 2000,
-    },
-    {
-      name: "Jul",
-      "Active User": 4000,
-    },
-    {
-      name: "Agu",
-      "Active User": 3000,
-    },
-    {
-      name: "Sep",
-      "Active User": 5000,
-    },
-    {
-      name: "Oct",
-      "Active User": 2000,
-    },
-    {
-      name: "Nov",
-      "Active User": 3000,
-    },
-    {
-      name: "Dec",
-      "Active User": 5000,
-    },
-  ];
+  {
+    name: "Jan",
+    activeUser: "1000",
+    year: '2021'
+  },
+  {
+    name: "Feb",
+    activeUser: "2000",
+    year: '2021'
+  },
+  {
+    name: "Mar",
+    activeUser: "5000",
+    year: '2021'
+  },
+  {
+    name: "Apr",
+    activeUser: "4000",
+    year: '2021'
+  },
+  {
+    name: "May",
+    activeUser: "3000",
+    year: '2021'
+
+  },
+  {
+    name: "Jun",
+    activeUser: "2000",
+
+
+  },
+  {
+    name: "Jul",
+    activeUser: "4000",
+    year: '2021'
+  },
+  {
+    name: "Agu",
+    activeUser: "3000",
+    year: '2021'
+  },
+  {
+    name: "Sep",
+    activeUser: "5000",
+    year: '2021'
+  },
+  {
+    name: "Oct",
+    activeUser: "2000",
+    year: '2021'
+  },
+  {
+    name: "Nov",
+    activeUser: "3000",
+    year: '2021'
+  },
+  {
+    name: "Dec",
+    activeUser: "5000",
+    year: '2021'
+  },
+];

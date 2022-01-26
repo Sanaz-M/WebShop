@@ -3,7 +3,11 @@ import { useParams } from "react-router-dom";
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 
 const SingleUser = () => {
-    const [users, setUsers] = useState([]);
+    const [user, setUser] = useState({
+        name: '',
+        email: '',
+        password: ''
+    });
     const params = useParams();
 
 
@@ -12,36 +16,39 @@ const SingleUser = () => {
     }, [])
 
     const userInfo = async () => {
-        let response = await fetch(`http://localhost:3000/users?name=${params.userName}`, {
+        let response = await fetch(`http://localhost:3000/users/${params.id}`, {
             headers: {
                 'Content-Type': 'application/json',
             },
         })
         const data = await response.json()
         console.log(data)
-        setUsers(data)
+        setUser(data)
     }
 
-    const updateUser = async () => {
-        let response = await fetch(`http://localhost:3000/users?name=${params.userName}`, {
+    const updateUser = async (e) => {
+        e.preventDefault()
+        let response = await fetch(`http://localhost:3000/users/` + user.id, {
             method: 'PUT',
+            body: JSON.stringify({
+                name: user.name,
+                email: user.email,
+                password: user.password
+            }),
             headers: {
                 'Content-Type': 'application/json',
             },
         })
-        const data = await response.json()
-        console.log(data)
-        setUsers({
-            name: data.name,
-            email: data.email,
-            password: data.password
-        })
+        if(response.ok) {
+            alert('success')
+        } else {
+            alert('error')
+        }
     }
 
 
     return (
         <div>
-            {users?.length > 0 && users.map((user) => (
                 <Form onSubmit={(e) => updateUser(e)}>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>User Name</Form.Label>
@@ -50,7 +57,7 @@ const SingleUser = () => {
                             type="text"
                             placeholder="name"
                             value={(user.name).toUpperCase()}
-
+                            onChange={e => setUser({ ...user, name: e.target.value })}
                         />
                     </Form.Group>
                     <Form.Group controlId="formBasicEmail">
@@ -60,6 +67,7 @@ const SingleUser = () => {
                             type="email"
                             placeholder="Enter email"
                             value={user.email}
+                            onChange={e => setUser({ ...user, email: e.target.value })}
                         />
                     </Form.Group>
                     <Form.Group controlId="formBasicPassword">
@@ -69,6 +77,7 @@ const SingleUser = () => {
                             type="text"
                             placeholder="Password"
                             value={user.password}
+                            onChange={e => setUser({ ...user, password: e.target.value })}
                         />
                     </Form.Group>
                     <Button
@@ -79,7 +88,6 @@ const SingleUser = () => {
                         Save
                     </Button>
                 </Form>
-            ))}
         </div>
     )
 }

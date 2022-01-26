@@ -12,6 +12,7 @@ import womanCard from '../assets/homepage-photo2.jpg';
 const HomePage = () => {
 
   const [query, setQuery] = useState('');
+  const [currency, setCurrency] = useState('€');
 
   const productsResult = useSelector(state => state.products.result);
   const dispatch = useDispatch();
@@ -91,7 +92,9 @@ const HomePage = () => {
         <Col md={1}>
           <Form>
             <Form.Group controlId="exampleForm.SelectCustomSizeSm">
-              <Form.Control as="select" size="sm" custom>
+              <Form.Control as="select" size="sm" custom
+              onChange={(e) => setCurrency(e.target.value)}
+              >
                 <option value='€'>Euro</option>
                 <option value='$'>Dollar</option>
               </Form.Control>
@@ -118,7 +121,7 @@ const HomePage = () => {
                   </div>
                   <div className="fw-bold">{product.category}</div>
                   <div>{product.name}</div>
-                  <div className="date1">{product.price}</div>
+                  <div className="date1">{product.price}{currency}</div>
                 </Col>
               ))
             }

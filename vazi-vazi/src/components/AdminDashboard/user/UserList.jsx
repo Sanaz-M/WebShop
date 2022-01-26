@@ -39,6 +39,7 @@ const UserList = () => {
             alert("user NOT deleted!");
         }
     }
+    
     return (
         <Container fluid id='admin-userList'>
             <Row>
@@ -68,7 +69,7 @@ const UserList = () => {
                                         <td>{user.email}</td>
                                         <td>{user.password}</td>
                                         <td>
-                                            <Link to={user.name}><Button variant="primary">Update</Button>
+                                            <Link to={user.id}><Button variant="primary">Update</Button>
                                             </Link>
                                             <Button
                                                 variant="danger"
