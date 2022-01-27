@@ -12,7 +12,6 @@ import Admin from './components/AdminDashboard/Admin';
 import UserList from './components/AdminDashboard/user/UserList';
 import ProductList from './components/AdminDashboard/product/ProductList';
 import SingleUser from './components/AdminDashboard/user/SingleUser';
-import ToDoFile from './components/ToDoFile';
 
 function App() {
   return (
