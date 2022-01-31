@@ -22,4 +22,4 @@ const UserChart = ({ title, data, dataKey, grid }) => {
     );
 }
 
-export default UserChart
+export default UserChart;

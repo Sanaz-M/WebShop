@@ -10,4 +10,4 @@ const ShoppingCart = () => {
     )
 }
 
-export default ShoppingCart
+export default ShoppingCart;

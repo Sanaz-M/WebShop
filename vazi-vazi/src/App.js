@@ -12,6 +12,7 @@ import Admin from './components/AdminDashboard/Admin';
 import UserList from './components/AdminDashboard/user/UserList';
 import ProductList from './components/AdminDashboard/product/ProductList';
 import SingleUser from './components/AdminDashboard/user/SingleUser';
+import SingleProduct from './components/AdminDashboard/product/SingleProduct';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/admin-dashboard/userlist" element={<UserList />} />
           <Route path="/admin-dashboard/userlist/:id" element={<SingleUser />} />
           <Route path="/admin-dashboard/productlist" element={<ProductList />} />
+          <Route path="/admin-dashboard/productlist/:id" element={<SingleProduct />} />
         </Routes>
       </div>
 

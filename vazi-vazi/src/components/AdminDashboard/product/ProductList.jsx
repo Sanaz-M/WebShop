@@ -22,7 +22,7 @@ const ProductList = () => {
         setQuery(e.target.value)
     }
 
-    const deletUser = async (id) => {
+    const deletProduct = async (id) => {
         try {
             let response = await fetch(`http://localhost:3000/products/${id}`, {
                 method: "DELETE",
@@ -72,7 +72,7 @@ const ProductList = () => {
                                             </Link>
                                             <Button
                                                 variant="danger"
-                                                onClick={() => deletUser(product.id)}
+                                                onClick={() => deletProduct(product.id)}
                                              > Delete</Button></td>
                                     </tr>
                                 ))
@@ -85,4 +85,4 @@ const ProductList = () => {
     )
 }
 
-export default ProductList
+export default ProductList;
