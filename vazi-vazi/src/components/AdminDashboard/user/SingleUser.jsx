@@ -92,4 +92,4 @@ const SingleUser = () => {
     )
 }
 
-export default SingleUser
+export default SingleUser;

@@ -23,8 +23,10 @@ const SideBar = () => {
       <div className="sidebarMenu">
         <span className="logo-section">
           <Link to='/'>
-            <img src={Logo} alt="logo" width='70' height='70' />
+            <div>
+              <img src={Logo} alt="logo" width='70' height='70' />
             <h2 className="sidebarTitle">Dashboard</h2>
+            </div>
           </Link>
         </span>
 
@@ -104,4 +106,4 @@ const SideBar = () => {
   );
 }
 
-export default SideBar
+export default SideBar;

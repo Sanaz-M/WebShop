@@ -55,7 +55,7 @@ const Footer = () => {
 
             <Row id="footer-second-row">
                     <p id="footer-last-line"> &copy; 2021-2022 Vazi Vazi, all rights reserved | Made with  <FavoriteIcon className='footer-heart-icon'/> by 
-                    <a href=''>Sanaz</a></p>
+                    <a href='https://github.com/Sanaz-M' className="ml-1" target='_blank'>Sanaz</a></p>
             </Row>
         </Container>
     )

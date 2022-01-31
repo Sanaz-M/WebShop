@@ -13,6 +13,7 @@ const HomePage = () => {
 
   const [query, setQuery] = useState('');
   const [currency, setCurrency] = useState('€');
+  const [price, setPrice] = useState([]);
 
   const productsResult = useSelector(state => state.products.result);
   const dispatch = useDispatch();
@@ -24,6 +25,12 @@ const HomePage = () => {
   const searchChange = (e) => {
     setQuery(e.target.value)
   }
+
+  const onChange = (e) => {
+    setCurrency(e.target.value)
+    
+  }
+
 
   return (
     <Container fluid className="homepage-main">
@@ -54,10 +61,10 @@ const HomePage = () => {
             <Card.Body>
             </Card.Body>
             <div className='firstCard-text'>
-            <Card.Text>
-              Women's collection
-            </Card.Text>
-            <Button variant="primary" id='firstCards-btn'>Buy Now</Button>
+              <Card.Text>
+                Women's collection
+              </Card.Text>
+              <Button variant="primary" id='firstCards-btn'>Buy Now</Button>
             </div>
           </Card>
         </Col>
@@ -66,10 +73,10 @@ const HomePage = () => {
             <Card.Body>
             </Card.Body>
             <div>
-            <Card.Text>
-              discount
-            </Card.Text>
-            <Button variant="primary" id='firstCards-btn'>Buy Now</Button>
+              <Card.Text>
+                discount
+              </Card.Text>
+              <Button variant="primary" id='firstCards-btn'>Buy Now</Button>
             </div>
           </Card>
         </Col>
@@ -78,10 +85,10 @@ const HomePage = () => {
             <Card.Body>
             </Card.Body>
             <div className='firstCard-text'>
-            <Card.Text>
-              Men's collection
-            </Card.Text>
-            <Button variant="primary" id='firstCards-btn'>Buy Now</Button>
+              <Card.Text>
+                Men's collection
+              </Card.Text>
+              <Button variant="primary" id='firstCards-btn'>Buy Now</Button>
             </div>
           </Card>
         </Col>
@@ -93,7 +100,7 @@ const HomePage = () => {
           <Form>
             <Form.Group controlId="exampleForm.SelectCustomSizeSm">
               <Form.Control as="select" size="sm" custom
-              onChange={(e) => setCurrency(e.target.value)}
+                onChange={onChange}
               >
                 <option value='€'>Euro</option>
                 <option value='$'>Dollar</option>

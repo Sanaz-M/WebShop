@@ -72,6 +72,6 @@ const MyNavBar = () => {
     )
 }
 
-export default MyNavBar
+export default MyNavBar;
 
 
