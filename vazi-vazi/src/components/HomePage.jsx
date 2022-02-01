@@ -7,6 +7,7 @@ import Footer from './Footer';
 import JumbotronVideo from '../assets/shoe&bag.mp4';
 import Pagination from '@material-ui/lab/Pagination';
 import womanCard from '../assets/homepage-photo2.jpg';
+import Product from './Product';
 
 
 const HomePage = () => {
@@ -22,13 +23,9 @@ const HomePage = () => {
     dispatch(getProductAction(query));
   }, [query]);
 
-  const searchChange = (e) => {
-    setQuery(e.target.value)
-  }
 
   const onChange = (e) => {
     setCurrency(e.target.value)
-    
   }
 
 
@@ -56,7 +53,7 @@ const HomePage = () => {
 
       {/* main cards */}
       <Row id="main-card-row">
-        <Col md={6} lg={3}>
+        <Col md={6} lg={4}>
           <Card className='main-first-cards' id='women-collection-card'>
             <Card.Body>
             </Card.Body>
@@ -68,7 +65,7 @@ const HomePage = () => {
             </div>
           </Card>
         </Col>
-        <Col md={6} lg={3}>
+        <Col md={6} lg={4}>
           <Card className='main-first-cards' id='off-collection-card'>
             <Card.Body>
             </Card.Body>
@@ -80,7 +77,7 @@ const HomePage = () => {
             </div>
           </Card>
         </Col>
-        <Col md={6} lg={3}>
+        <Col md={6} lg={4}>
           <Card className='main-first-cards' id='men-collection-card'>
             <Card.Body>
             </Card.Body>
@@ -122,13 +119,7 @@ const HomePage = () => {
                 <Col className="m-1" key={product.id}>
                   {/* className="d-flex justify-content-between align-items-start" */}
 
-                  <div className="ms-2 me-auto">
-                    <div>
-                      <img src={product.image} alt='shoe' width='300' height='300' /></div>
-                  </div>
-                  <div className="fw-bold">{product.category}</div>
-                  <div>{product.name}</div>
-                  <div className="date1">{product.price}{currency}</div>
+                  <Product image={product.image} price={product.price} name={product.name} currency={currency} />
                 </Col>
               ))
             }

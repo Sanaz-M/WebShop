@@ -7,12 +7,13 @@ import Registration from './components/register&login/Registration';
 import HomePage from './components/HomePage';
 import LogIn from './components/register&login/LogIn';
 import Contact from './components/Contact';
-import ShoppingCart from './components/ShoppingCart';
+import ShoppingCart from './components/checkout/ShoppingCart';
 import Admin from './components/AdminDashboard/Admin';
 import UserList from './components/AdminDashboard/user/UserList';
 import ProductList from './components/AdminDashboard/product/ProductList';
 import SingleUser from './components/AdminDashboard/user/SingleUser';
 import SingleProduct from './components/AdminDashboard/product/SingleProduct';
+import ProductDetails from './components/ProductDetails';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Routes>
 
           <Route path="/" element={<HomePage />} />
+          <Route path="/details" element={<ProductDetails />} />
           <Route path="/register" element={<Registration />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/contact-us" element={<Contact />} />
