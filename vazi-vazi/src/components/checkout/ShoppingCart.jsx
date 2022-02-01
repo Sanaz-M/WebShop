@@ -1,4 +1,4 @@
-import MyNavBar from './MyNavBar';
+import MyNavBar from '../MyNavBar';
 
 
 

@@ -31,25 +31,20 @@
       }
     },
     {
-      "id": "103",
       "category": "bags",
       "design": "woman",
-      "name": "bag1",
+      "name": "Skin Print Backpack",
       "price": "220",
       "origin": "Spain",
-      "size": "30 x 12",
       "composition": "80% Leather, 20% Polyester",
       "image": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
-      "comments": {
-        "rate": "4",
-        "comment": "Good quality."
-      }
+      "id": "103"
     },
     {
       "id": "104",
       "category": "bags",
       "design": "men",
-      "name": "bag2",
+      "name": "Minimalist Shoulder Bag",
       "price": "200",
       "origin": "Spain",
       "size": "40 x 25",

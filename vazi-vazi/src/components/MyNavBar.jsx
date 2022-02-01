@@ -25,8 +25,8 @@ const MyNavBar = () => {
 
     return (
         <Navbar collapseOnSelect expand="lg" fixed="top" id="myNavbar">
-            <Link to="/"><img src={Logo} alt="logo" width='70' height='70' /></Link>
-            <Link to="/"><p className='mr-4 ml-0'>Vazi Vazi</p></Link>
+            <Link to="/"><img src={Logo} alt="logo" width='100' height='100' /></Link>
+            <Link to="/"><p className='text-white mr-4 ml-0'>Vazi Vazi</p></Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto gender">
