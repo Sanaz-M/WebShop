@@ -34,15 +34,17 @@ justify-content: center;
 }
 
 .main-first-cards{
+    position: relative;
     height: 550px;
 }
 
+
 #women-collection-card{
     background-image: url('https://images.pexels.com/photos/7789145/pexels-photo-7789145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-    background-size: 500px;
     background-repeat: no-repeat;
     object-fit: cover;
 }
+
 
 .firstCard-text{
 background-color: rgba(255, 255, 255, 0.671);
@@ -71,16 +73,46 @@ color: rgba(255, 255, 255, 0.);
     object-fit: cover;
 }
 
-
-
 .MuiPaginationItem-page.Mui-selected {
     background-color: #9c27b0 !important;
 }
 
 
+
 /* product cards styles */
+.homepage-productCards-row.row{
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 3;
+    margin: 10px;
+}
+
+.suggestion-for{
+    border: 1px solid #230e1f;
+    background-color: #230e1f;
+    color: rgba(238, 238, 238, 0.87);
+    padding: 20px;
+    justify-content: center;
+}
+
+.suggestion-for.row{
+    margin-right: none !important;
+    margin-left: none !important;
+}
+
+#homepage-productCard{
+    background: transparent;
+    border: none;
+    object-fit: cover;
+}
+
 .product-card{
     color: rgb(104, 104, 104);
     text-decoration: none;
     font-size: 12px;
+}
+
+.card-body{
+  padding: 0.5rem 1.25rem 1.25rem 0;
 }

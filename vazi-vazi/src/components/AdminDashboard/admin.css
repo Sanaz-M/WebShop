@@ -4,7 +4,7 @@ background: #0f010f;
 color: rgb(182, 180, 180);
 }
 
-.row{
+#admin-container .row{
     margin-right: 0;
 }
 

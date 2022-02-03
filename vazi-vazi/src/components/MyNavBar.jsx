@@ -10,13 +10,7 @@ import SearchSharpIcon from '@material-ui/icons/SearchSharp';
 
 
 
-const MyNavBar = () => {
-    const [query, setQuery] = useState('');
-
-    const searchChange = (e) => {
-        setQuery(e.target.value)
-    }
-
+const MyNavBar = ({query, onSubmit, searchChange}) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -49,10 +43,7 @@ const MyNavBar = () => {
                     <Link to="/contact-us"><span className='mr-2 text-white'>Contact</span></Link>
                 </Nav>
                 <Nav>
-                    {/* <Form className='mx-2' onSubmit={(e) => {
-                        e.preventDefault()
-                        dispatch(getProductAction(query))
-                    }}>
+                    <Form className='mx-2' onSubmit={onSubmit}>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Control
                                 type="text"
@@ -61,7 +52,7 @@ const MyNavBar = () => {
                                 onChange={searchChange}
                             />
                         </Form.Group>
-                    </Form> */}
+                    </Form>
                     <Link to='/register'><span className='mr-2 text-white'><SearchSharpIcon /></span></Link>
                     <Link to='/shopping-cart'><span className='mr-2 text-white'><ShoppingCartSharpIcon /></span></Link>
                     <Link to='/register'><span className='mr-2 text-white'><AccountCircleIcon /></span></Link>
