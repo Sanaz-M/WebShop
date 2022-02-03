@@ -4,12 +4,16 @@
       "id": "101",
       "category": "shoes",
       "design": "men",
-      "name": "shoe1",
+      "name": "Men Sneakers",
       "price": "190",
       "origin": "Italy",
       "size": "40",
-      "composition": "80% Leather, 20% Polyester",
-      "image": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80g",
+      "color": "Gray",
+      "composition": "100% Plutonium leather",
+      "image": {
+        "img1": "https://img.ltwebstatic.com/images3_pi/2021/08/06/16282442361c8407c7a588a35c90fc5d6ce6112d7a.webp",
+        "img2": "https://img.ltwebstatic.com/images3_pi/2021/08/06/16282442348be0ba96db0c0c5a0a032bfe7ce4ba78.webp"
+      },
       "comments": {
         "rate": "4.5",
         "comment": "I like it!"
@@ -19,40 +23,93 @@
       "id": "102",
       "category": "shoes",
       "design": "woman",
-      "name": "shoe2",
+      "name": "Nike Running Shoe",
       "price": "400",
       "origin": "France",
       "size": "38",
-      "composition": "80% Leather, 20% Polyester",
-      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "color": "Red",
+      "composition": "40% Plutonium Leather, 60% Polyester",
+      "image": {
+        "img1": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "img2": "https://images.pexels.com/photos/786003/pexels-photo-786003.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      },
       "comments": {
         "rate": "4.5",
         "comment": "I like it!"
       }
     },
     {
+      "id": "103",
       "category": "bags",
       "design": "woman",
       "name": "Skin Print Backpack",
       "price": "220",
       "origin": "Spain",
+      "color": "Pink",
       "composition": "80% Leather, 20% Polyester",
-      "image": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
-      "id": "103"
+      "image": {
+        "img1": "https://images.pexels.com/photos/2281195/pexels-photo-2281195.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "img2": "https://images.pexels.com/photos/2281197/pexels-photo-2281197.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      },
+      "comments": {
+        "rate": "5",
+        "comment": "I like it!"
+      }
     },
     {
       "id": "104",
       "category": "bags",
-      "design": "men",
+      "design": "woman",
       "name": "Minimalist Shoulder Bag",
       "price": "200",
       "origin": "Spain",
       "size": "40 x 25",
+      "color": "Brown",
       "composition": "80% Leather, 20% Polyester",
-      "image": "https://images.unsplash.com/photo-1525103504173-8dc1582c7430?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
+      "image": {
+        "img1": "https://images.pexels.com/photos/167703/pexels-photo-167703.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "img2": "https://images.pexels.com/photos/157888/fashion-glasses-go-pro-female-157888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      },
       "comments": {
         "rate": "4",
         "comment": "Good quality."
+      }
+    },
+    {
+      "id": "105",
+      "category": "shoes",
+      "design": "woman",
+      "name": "Simple Formal Shoe",
+      "price": "131",
+      "origin": "Italy",
+      "size": "40",
+      "color": "White",
+      "composition": "100% Plutonium leather",
+      "image": {
+        "img1": "https://img.ltwebstatic.com/images3_pi/2021/05/25/1621940342d46a053177781b0e22b308bfe3e5676c.webp",
+        "img2": "https://img.ltwebstatic.com/images3_pi/2021/05/08/1620436317ed2fdd13bcbdb9d62d25193f7c7831f0.webp"
+      },
+      "comments": {
+        "rate": "4",
+        "comment": "I love these mary-janes, they're really cute ❤️"
+      }
+    },
+    {
+      "id": "106",
+      "category": "bags",
+      "design": "woman",
+      "name": "Simple Purse",
+      "price": "85",
+      "origin": "China",
+      "color": "Blue",
+      "composition": "80% PLeather, 20% Rubber",
+      "image": {
+        "img1": "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=457&q=80",
+        "img2": "https://images.unsplash.com/photo-1560891958-68bb1fe7fb78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80"
+      },
+      "comments": {
+        "rate": "3",
+        "comment": "The material is not the best."
       }
     }
   ],
