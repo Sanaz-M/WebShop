@@ -10,7 +10,7 @@ import SearchSharpIcon from '@material-ui/icons/SearchSharp';
 
 
 
-const MyNavBar = ({query, onSubmit, searchChange}) => {
+const MyNavBar = ({ query, onSubmit, searchChange, onChange }) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -56,7 +56,17 @@ const MyNavBar = ({query, onSubmit, searchChange}) => {
                     <Link to='/register'><span className='mr-2 text-white'><SearchSharpIcon /></span></Link>
                     <Link to='/shopping-cart'><span className='mr-2 text-white'><ShoppingCartSharpIcon /></span></Link>
                     <Link to='/register'><span className='mr-2 text-white'><AccountCircleIcon /></span></Link>
-                    
+                    <Form>
+                        <Form.Group controlId="exampleForm.SelectCustomSizeSm">
+                            <Form.Control as="select" size="sm" custom
+                                onChange={onChange}
+                            >
+                                <option value='€'>Euro</option>
+                                <option value='$'>Dollar</option>
+                            </Form.Control>
+                        </Form.Group>
+                    </Form>
+
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

@@ -41,7 +41,7 @@ const HomePage = () => {
       <Container fluid className="homepage-main">
         <Row>
           <Col>
-            <MyNavBar onSubmit={onSubmit} query={query} searchChange={changeQuery} />
+            <MyNavBar onSubmit={onSubmit} query={query} searchChange={changeQuery} onChange={onChange} />
 
             <Jumbotron id="Jumbotron1">
               <video autoPlay muted loop id="jumbotronVideo">
@@ -100,19 +100,6 @@ const HomePage = () => {
         </Row>
 
         <Row>
-          {/* sorting nav */}
-          <Col md={1}>
-            <Form>
-              <Form.Group controlId="exampleForm.SelectCustomSizeSm">
-                <Form.Control as="select" size="sm" custom
-                  onChange={onChange}
-                >
-                  <option value='€'>Euro</option>
-                  <option value='$'>Dollar</option>
-                </Form.Control>
-              </Form.Group>
-            </Form>
-          </Col>
           <Col md={3}>
 
           </Col>
