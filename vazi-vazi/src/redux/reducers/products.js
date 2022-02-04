@@ -25,4 +25,4 @@ const productsReducer = (state = initialState.products, action) => {
     }
 }
 
-export default productsReducer
+export default productsReducer;

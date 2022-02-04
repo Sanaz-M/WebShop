@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Row, Col, Card } from 'react-bootstrap';
+import { Col, Card } from 'react-bootstrap';
+import './product.css';
+
 
 
 
@@ -13,7 +15,7 @@ const Product = ({ name, image, price, currency, id }) => {
                 <Link to={`/details/${id}`}>
                     <Card.Img variant="top" src={image} height="400" alt="pt.shein.com" />
                     <Card.Body>
-                        <Card.Title><div className="product-card">{name}</div><div className="product-card">{currency}{evaluateTotal()}</div></Card.Title>
+                        <Card.Title><div className="product-card">{name}<br />{currency}{evaluateTotal()}</div></Card.Title>
                     </Card.Body>
                 </Link>
             </Card>

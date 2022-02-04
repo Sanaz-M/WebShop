@@ -3,6 +3,8 @@ export const TOGGLE_LOADER = 'TOGGLE_LOADER';
 export const SEARCH_QUERY = 'SEARCH_QUERY';
 export const GET_USERS = 'GET_USERS';
 
+
+
 export const getProductAction = (query) => {
     return async (dispatch) => {
 
