@@ -56,14 +56,8 @@ opacity: 0;
 color: rgba(255, 255, 255, 0.);
 }
 
-#off-collection-card{
-    background-image: url('../assets/homepage-discount.jpg');
-    background-repeat: no-repeat;
-    object-fit: cover;
-}
-
 #men-collection-card{
-    background-image: url('../assets/homepage-photo2.jpg');
+    background-image: url('../../assets/homepage-photo2.jpg');
     background-repeat: no-repeat;
     object-fit: cover;
 }
@@ -101,4 +95,3 @@ color: rgba(255, 255, 255, 0.);
     border: none;
     object-fit: cover;
 }
-

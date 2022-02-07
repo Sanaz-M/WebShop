@@ -1,3 +1,7 @@
+#productDetails-container{
+    margin-top: 100px;
+}
+
 .product-card{
     color: rgb(104, 104, 104);
     text-decoration: none;
@@ -9,6 +13,26 @@
     font-size: 1rem;
 }
 
-#product-reviews{
+#product-rate{
     display: flex;
+}
+
+.btn-success{
+    background-color: #230e1f !important;
+    font-size: 1.2rem;
+    border: transparent;
+    width: 80%;
+    border-radius:40px;
+    font-weight: 600;
+    height: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover{
+    background-color: #58194d !important;
+}
+
+/* Product's Size buttons */
+#size-btn{
+    width: 25%;
 }

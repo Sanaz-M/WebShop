@@ -13,10 +13,6 @@
       "image": {
         "img1": "https://img.ltwebstatic.com/images3_pi/2021/08/06/16282442361c8407c7a588a35c90fc5d6ce6112d7a.webp",
         "img2": "https://img.ltwebstatic.com/images3_pi/2021/08/06/16282442348be0ba96db0c0c5a0a032bfe7ce4ba78.webp"
-      },
-      "comments": {
-        "rate": "4.5",
-        "comment": "I like it!"
       }
     },
     {
@@ -32,10 +28,6 @@
       "image": {
         "img1": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         "img2": "https://images.pexels.com/photos/786003/pexels-photo-786003.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-      },
-      "comments": {
-        "rate": "4.5",
-        "comment": "I like it!"
       }
     },
     {
@@ -50,10 +42,6 @@
       "image": {
         "img1": "https://images.pexels.com/photos/2281195/pexels-photo-2281195.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         "img2": "https://images.pexels.com/photos/2281197/pexels-photo-2281197.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-      },
-      "comments": {
-        "rate": "5",
-        "comment": "I like it!"
       }
     },
     {
@@ -69,10 +57,6 @@
       "image": {
         "img1": "https://images.pexels.com/photos/167703/pexels-photo-167703.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
         "img2": "https://images.pexels.com/photos/157888/fashion-glasses-go-pro-female-157888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-      },
-      "comments": {
-        "rate": "4",
-        "comment": "Good quality."
       }
     },
     {
@@ -88,10 +72,6 @@
       "image": {
         "img1": "https://img.ltwebstatic.com/images3_pi/2021/05/25/1621940342d46a053177781b0e22b308bfe3e5676c.webp",
         "img2": "https://img.ltwebstatic.com/images3_pi/2021/05/08/1620436317ed2fdd13bcbdb9d62d25193f7c7831f0.webp"
-      },
-      "comments": {
-        "rate": "4",
-        "comment": "I love these mary-janes, they're really cute ❤️"
       }
     },
     {
@@ -106,11 +86,39 @@
       "image": {
         "img1": "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=457&q=80",
         "img2": "https://images.unsplash.com/photo-1560891958-68bb1fe7fb78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80"
-      },
-      "comments": {
-        "rate": "3",
-        "comment": "The material is not the best."
       }
+    }
+  ],
+  "comments": [
+    {
+      "commentId": "101",
+      "rate": "4.5",
+      "comment": "I like it!"
+    },
+    {
+      "commentId": "102",
+      "rate": "4",
+      "comment": "I like it!"
+    },
+    {
+      "commentId": "103",
+      "rate": "5",
+      "comment": "I love it. Great quality."
+    },
+    {
+      "commentId": "104",
+      "rate": "4",
+      "comment": "Good quality."
+    },
+    {
+      "commentId": "105",
+      "rate": "5",
+      "comment": "I love these mary-janes, they're really cute ❤️"
+    },
+    {
+      "commentId": "106",
+      "rate": "3",
+      "comment": "The material is not the best."
     }
   ],
   "users": [
