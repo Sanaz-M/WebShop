@@ -1,10 +1,10 @@
 import './App.css';
-import '../src/styles/HomePage.css'
+import './components/homepage/HomePage.css';
 import '../src/styles/MyNavBar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Registration from './components/register&login/Registration';
-import HomePage from './components/HomePage';
+import HomePage from './components/homepage/HomePage';
 import LogIn from './components/register&login/LogIn';
 import Contact from './components/Contact';
 import ShoppingCart from './components/checkout/ShoppingCart';
