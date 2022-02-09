@@ -11,6 +11,8 @@
 
 .product-review-number{
     font-size: 1rem;
+    font-weight: 500;
+    color: #023e7e;
 }
 
 #product-rate{
@@ -21,9 +23,9 @@
     background-color: #230e1f !important;
     font-size: 1.2rem;
     border: transparent;
-    width: 80%;
+    width: 90%;
     border-radius:40px;
-    font-weight: 600;
+    font-weight: 400;
     height: 50%;
     transition: background-color 0.3s ease;
 }
@@ -34,5 +36,20 @@
 
 /* Product's Size buttons */
 #size-btn{
-    width: 25%;
+    width: 31%;
+}
+
+
+#crueltyFree-description{
+    font-size: 1rem;
+    padding: 1rem;
+    margin-right: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+/* Product Accordion styles */
+.MuiPaper-root.MuiAccordion-rounded{
+    background: transparent;
 }

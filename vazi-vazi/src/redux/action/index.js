@@ -3,6 +3,8 @@ export const TOGGLE_LOADER = 'TOGGLE_LOADER';
 export const SEARCH_QUERY = 'SEARCH_QUERY';
 export const GET_USERS = 'GET_USERS';
 export const GET_COMMENTS ="GET_COMMENTS";
+export const ADD_TO_CART = "ADD_TO_CART";
+export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 
 
 
@@ -109,3 +111,14 @@ export const getCommentsAction = () => {
         }
     }
 };
+
+
+export const addToCartAction = (addProduct) => ({
+    type: ADD_TO_CART,
+    payload: addProduct, 
+  });
+  
+  export const removeFromCartAction = (indexToRemove) => ({
+    type: REMOVE_FROM_CART,
+    payload: indexToRemove,
+  });

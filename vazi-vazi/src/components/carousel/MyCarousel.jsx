@@ -1,12 +1,14 @@
 import { Carousel } from 'react-bootstrap';
 
-const MyCarousel = ({image, image1}) => {
+
+
+const MyCarousel = ({ image, image1 }) => {
   return (
     <Carousel fade>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={`${image}/800x400?text=First slide&bg=373940`}
+          src={`${image}/850x500?text=First slide&bg=373940`}
           alt="First slide"
         />
         <Carousel.Caption>
@@ -14,18 +16,17 @@ const MyCarousel = ({image, image1}) => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src={`${image1}/800x400?text=First slide&bg=373940`}
+          className="d-inline w-100"
+          src={`${image1}/850x500?text=First slide&bg=373940`}
           alt="Second slide"
         />
-
         <Carousel.Caption>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={`${image}/800x400?text=First slide&bg=373940`}
+          src={`${image}/850x500?text=First slide&bg=373940`}
           alt="Third slide"
         />
 

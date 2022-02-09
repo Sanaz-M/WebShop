@@ -1,0 +1,35 @@
+#comment-verifiedPurchase{
+    color: red;
+    font-size: 0.9rem;
+}
+
+.commentArea-heading{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+#comment-subject{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#customer-preview{
+    font-size: 1.1rem;
+}
+
+.number-of-reviews{
+    font-size: 1rem;
+}
+
+.progress-bar{
+    background-color: #58194d;
+}
+
+.percent-of-rates{
+    font-size: 1rem;
+    color: #58194d;
+}
+
+.progress{
+    width: 80%;
+}
