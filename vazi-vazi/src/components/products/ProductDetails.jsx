@@ -8,24 +8,28 @@ import Rating from '@material-ui/lab/Rating';
 import ProductSize from './ProductSize';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { getCommentsAction } from '../../redux/action';
+import { addToCartAction} from '../../redux/action';
+import Footer from '../Footer';
+import ProductAccordion from './ProductAccordion';
+import CommentArea from '../comments/CommentArea';
+
+
 
 const ProductDetails = () => {
     const [product, setProduct] = useState([]);
+    const [comments, setComments] = useState([]);
     const [image, setImage] = useState([]);
-    const commentsResult = useSelector(state => state.comments.content);
-
-    const dispatch = useDispatch();
+    
     const params = useParams();
+    const dispatch = useDispatch()
     const randomReviewNumber = Math.floor(Math.random() * 5000)
 
-    const filterCommentList = () => {
-        return commentsResult.filter(comment =>comment.commentId === product.id)
-    }
+    console.log('!!', params.id)
+
 
     useEffect(() => {
         productInfo();
-        dispatch(getCommentsAction());
+        getComments()
     }, []);
 
     const productInfo = async () => {
@@ -39,6 +43,17 @@ const ProductDetails = () => {
         setImage(data.image);
     }
 
+    const getComments = async () => {
+        let response = await fetch(`http://localhost:3000/comments`, {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+        const allTheComments = await response.json();
+        const productComments = allTheComments.filter(comment => comment.commentId === params.id)
+        setComments(productComments);
+    }
+
     return (
         <div>
             <div>
@@ -46,34 +61,39 @@ const ProductDetails = () => {
             </div>
             <div>
                 <Container fluid id="productDetails-container">
-                    <Row><MyNavBar /></Row>
                     <Row>
-                        <Col md={8}>
+                        <Col sm={12} lg={8}>
                             <MyCarousel image={image.img1} image1={image.img2} />
                         </Col>
-                        <Col md={4}>
+                        <Col sm={12} lg={4}>
                             <div className='px-3 py-1'>
-                                <div>{product.name}</div>
+                                <div><strong>{product.name}</strong></div>
                                 <div id="product-rate">
-                                    <span><Rating name="half-rating-read" value={Number(commentsResult.rate)} precision={0.5} readOnly /></span>
+                                    <span><Rating name="half-rating-read" value={(comments.map(c => Number(c.rate)).reduce((accumulator, curr) => accumulator + curr, 0))/comments.length} precision={0.5} readOnly /></span>
                                     <a href="#product-comments" className='product-review-number'>({randomReviewNumber} Reviews)</a>
                                 </div>
-                                <div>{product.color}</div>
                                 <div>{product.price}</div>
-                                <div className="product-card mt-2"><div className="mb-1">Select Size</div><ProductSize /></div>
+                                <div className="product-card mt-2">
+                                    <div className="mb-1">Select Size</div>
+                                    <ProductSize />
+                                    </div>
                                 <div className="px-3">
-                                    <Link to="/shopping-cart"><Button id='addtoBag-btn' variant="success">Add to Bag</Button>
-                                    </Link>
+                                    <Button id='addtoBag-btn' variant="success" onClick={() =>  dispatch(addToCartAction(product))}>Add to Bag</Button>
                                 </div>
+                                <div md={3} id="crueltyFree-description">
+                                    <p>In the animal rights movement, cruelty-free is a label for products or activities that do not harm or kill animals anywhere in the world. Products tested on animals or made from animals are not considered cruelty-free, since these tests are often painful and cause the suffering and death of millions of animals every year.</p>
+                                </div>
+                                <ProductAccordion origin={product.origin} color={product.color} composition={product.composition} />
                             </div>
                         </Col>
                     </Row>
-                    <div>{filterCommentList().map((comment) => (
-                        <div>{comment.comment}</div>
-                    ))}</div>
+                    <Row>
+                        <CommentArea comments={comments} />   
+                    </Row>
                 </Container>
             </div>
-         </div>
+            <Footer />
+        </div>
     )
 }
 

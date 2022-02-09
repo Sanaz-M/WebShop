@@ -1,4 +1,4 @@
-import { Button, Container, Row, Col, Card, Modal } from 'react-bootstrap'
+import { Button, Container, Row, Col, Card, Modal } from 'react-bootstrap';
 import MyNavBar from '../MyNavBar';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -15,14 +15,22 @@ const HomePage = () => {
 
   const productsResult = useSelector(state => state.products.result);
   const dispatch = useDispatch();
+  
+  const filterWomenProducts = () => {
+    return productsResult.filter(product => product.design === "woman")
+}
+
+const filterMenProducts = () => {
+  return productsResult.filter(product => product.design === "men").slice(0,4)
+}
 
 
-  useEffect(() => {
+  useEffect(() => { 
     dispatch(getProductAction(query));
   }, [query]);
 
 
-  const onChange = (e) => {
+  const onChange = (e) => { 
     setCurrency(e.target.value)
   };
 
@@ -84,7 +92,7 @@ const HomePage = () => {
             <Row>
 
               {
-                productsResult?.length > 0 && productsResult.filter(product => product.design === "woman").map((product) => (
+                productsResult?.length > 0 && filterWomenProducts().map((product) => (
 
                   <Product
                     key={product.id}
@@ -104,7 +112,7 @@ const HomePage = () => {
           <Col md={12}>
             <Row>
               {
-                productsResult?.length > 0 && productsResult.filter(product => product.design === "men").map((product) => (
+                productsResult?.length > 0 && filterMenProducts().map((product) => (
 
                   <Product
                     key={product.id}

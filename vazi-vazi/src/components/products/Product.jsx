@@ -11,14 +11,16 @@ const Product = ({ name, image, price, currency, id }) => {
 
     return (
         <Col sm={12} md={4} lg={3}>
-            <Card id="homepage-productCard">
-                <Link to={`/details/${id}`}>
+            <Link to={`/details/${id}`}>
+                <Card key={id} id="homepage-productCard">
+
                     <Card.Img variant="top" src={image} height="400" alt="pt.shein.com" />
                     <Card.Body className="product-card">
                         <Card.Title><div className="product-card">{name}<br />{currency}{evaluateTotal()}</div></Card.Title>
                     </Card.Body>
-                </Link>
-            </Card>
+
+                </Card>
+            </Link>
         </Col>
     )
 }

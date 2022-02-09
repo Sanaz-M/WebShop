@@ -6,6 +6,7 @@ import { encryptTransform } from 'redux-persist-transform-encrypt';
 import productsReducer from '../reducers/productsReducer.js';
 import usersReducer from '../reducers/usersReducer.js';
 import commentReducer from '../reducers/commentReducer.js';
+import cartReducer from '../reducers/cartReducer';
 
 
 const aComposeThatAlwaysWorks = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
@@ -25,6 +26,10 @@ export const initialState = {
 
   comments: {
     content: []
+  },
+
+  cart: {
+    content: []
   }
 }
 
@@ -42,7 +47,8 @@ const persistConfig = {
 const bigReducer = combineReducers({
   products: productsReducer,
   users: usersReducer,
-  comments: commentReducer
+  comments: commentReducer,
+  cart: cartReducer
 })
 
 const persistedBigReducer = persistReducer(persistConfig, bigReducer)
