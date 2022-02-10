@@ -34,7 +34,7 @@ const Footer = () => {
                     <Link to="/contact-us">Contact Us</Link>
                     <Link to="/something">About Us</Link>
                     <p className="footer-contactUs-details">Call us on (+1) 96 716 6879 or drop us
-                        <br />a message on social media.</p>
+                        a message on social media.</p>
                     <span className="footer-icons">
                         <a href='https://www.facebook.com/' target="_blank"><FacebookIcon className="icon" /></a>
                         <a href='https://www.instagram.com/' target="_blank"><InstagramIcon className="icon" /></a>

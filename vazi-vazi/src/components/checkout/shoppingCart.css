@@ -2,23 +2,25 @@
     padding: 2rem;
 }
 
-#shoppingCart-productHeading{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#anything11{
-    display: flex;
-    justify-content: space-between;
+#checkout-mainRow{
+   background-color: rgba(255, 255, 255, 0.74);
 }
 
 #remove-item{
     font-size: 0.8rem;
     justify-content: baseline;
+    cursor: pointer;
 }
 
-#firstPart-procutDetails{
-    display: flex;
-    align-items: flex-end;
+#remove-item:hover{
+    color: purple;
 }
+
+#shoppingCart-table{
+    color: black;
+}
+
+#checkout-col{
+    background-color: rgb(128, 85, 128);
+}
+

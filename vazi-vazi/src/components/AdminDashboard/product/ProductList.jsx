@@ -40,38 +40,36 @@ const ProductList = () => {
         }
     }
     return (
-        <Container fluid id='admin-userList'>
+        <Container fluid id='admin-producrList'>
             <Row>
                 <AdminNavBar />
             </Row>
-            <Row id='user-secondRow'>
+            <Row id='product-secondRow'>
                 <Col sm={6} md={3} lg={2}>
                     <SideBar />
                 </Col>
                 <Col sm={6} md={9} lg={10} className='mainSec-home'>
-                    <Table striped bordered hover className='admin-userlist-table'>
+                    <Table striped bordered hover className="product-table">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Password</th>
+                                <th>Product Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
                             </tr>
                         </thead>
                         <tbody>
                             {
                                 productResult?.length > 0 && productResult.map((product) => (
                     
-                                    <tr>
-                                        <td>1</td>
+                                    <tr className="dashboard-tableRow">
                                         <td>{product.name}</td>
                                         <td>{product.category}</td>
-                                        <td>{product.price}</td>
+                                        <td>€{product.price}</td>
                                         <td>
-                                            <Link to={product.id}><Button variant="primary">Update</Button>
+                                            <Link to={product.id}><Button className="update-btn">Update</Button>
                                             </Link>
                                             <Button
-                                                variant="danger"
+                                                className="dashboard-deleteBtn"
                                                 onClick={() => deletProduct(product.id)}
                                              > Delete</Button></td>
                                     </tr>
