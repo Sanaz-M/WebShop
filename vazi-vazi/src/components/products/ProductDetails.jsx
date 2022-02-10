@@ -21,10 +21,7 @@ const ProductDetails = () => {
     const [image, setImage] = useState([]);
     
     const params = useParams();
-    const dispatch = useDispatch()
-    const randomReviewNumber = Math.floor(Math.random() * 5000)
-
-    console.log('!!', params.id)
+    const dispatch = useDispatch();
 
 
     useEffect(() => {
@@ -70,7 +67,7 @@ const ProductDetails = () => {
                                 <div><strong>{product.name}</strong></div>
                                 <div id="product-rate">
                                     <span><Rating name="half-rating-read" value={(comments.map(c => Number(c.rate)).reduce((accumulator, curr) => accumulator + curr, 0))/comments.length} precision={0.5} readOnly /></span>
-                                    <a href="#product-comments" className='product-review-number'>({randomReviewNumber} Reviews)</a>
+                                    <a href="#product-comments" className='product-review-number'>({comments.length} Reviews)</a>
                                 </div>
                                 <div>{product.price}</div>
                                 <div className="product-card mt-2">

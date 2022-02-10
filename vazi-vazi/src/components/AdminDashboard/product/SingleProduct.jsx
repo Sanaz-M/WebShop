@@ -118,7 +118,7 @@ const SingleProduct = () => {
                     <Form.Control
                         type="text"
                         placeholder="name"
-                        value={product.image}
+                        value={product.image.img1}
                         onChange={e => setProduct({ ...product, image: e.target.value })}
                     />
                 </Form.Group>

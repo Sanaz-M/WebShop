@@ -39,47 +39,47 @@ const UserList = () => {
             alert("user NOT deleted!");
         }
     }
-    
+
     return (
-        <Container fluid id='admin-userList'>
+        <Container fluid id='admin-userList-container'>
             <Row>
                 <AdminNavBar />
             </Row>
             <Row id='user-secondRow'>
-                <Col sm={6} md={3} lg={2}>
+                <Col sm={0} md={4} lg={2}>
                     <SideBar />
                 </Col>
-                <Col sm={6} md={9} lg={10} className='mainSec-home'>
-                    <Table striped bordered hover className='admin-userlist-table'>
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Password</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                usersResult?.length > 0 && usersResult.map((user) => (
-                    
-                                    <tr>
-                                        <td>1</td>
-                                        <td>{user.name}</td>
-                                        <td>{user.email}</td>
-                                        <td>{user.password}</td>
-                                        <td>
-                                            <Link to={user.id}><Button variant="primary">Update</Button>
-                                            </Link>
-                                            <Button
-                                                variant="danger"
-                                                onClick={() => deletUser(user.id)}
-                                             > Delete</Button></td>
-                                    </tr>
-                                ))
-                            }
-                        </tbody>
-                    </Table>
+                <Col sm={12} md={8} lg={9} className='mainSec-home'>
+                    <Row>
+                        <Table striped bordered hover>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Password</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    usersResult?.length > 0 && usersResult.map((user) => (
+
+                                        <tr className="dashboard-tableRow">
+                                            <td>{user.name}</td>
+                                            <td>{user.email}</td>
+                                            <td>{user.password}</td>
+                                            <td>
+                                                <Link to={user.id}><Button className="update-btn">Update</Button>
+                                                </Link>
+                                                <Button
+                                                    className="dashboard-deleteBtn"
+                                                    onClick={() => deletUser(user.id)}
+                                                > Delete</Button></td>
+                                        </tr>
+                                    ))
+                                }
+                            </tbody>
+                        </Table>
+                    </Row>
                 </Col>
             </Row>
         </Container>

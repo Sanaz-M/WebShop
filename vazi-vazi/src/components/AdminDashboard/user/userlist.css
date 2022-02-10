@@ -1,11 +1,23 @@
-#admin-userList{
-    display: flex;
-    flex-direction: row;
+#admin-productList{
+    width: 100%;
+}
+
+#admin-userList-container{
     background-color: #0f010f;
     color: rgb(182, 180, 180);
     padding:0;
     min-height: 100vh;
-    width: 100%;
+}
+
+#admin-producrList{
+    background-color: #0f010f;
+    color: rgb(182, 180, 180);
+    padding:0;
+    min-height: 100vh;
+}
+
+#product-secondRow{
+    margin-right: 0 !important;
 }
 
 #user-secondRow{
@@ -17,6 +29,31 @@ color: rgb(182, 180, 180);
     color: rgb(182, 180, 180); 
 }
 
-#admin-userlist-table{
-    color: rgb(182, 180, 180); 
+.table.product-table{
+    width: 90%;
 }
+
+.update-btn{
+    background-color: #256109b8;
+    border-color: #256109b8;
+}
+
+.update-btn:hover{
+    background-color: #163d04b8;
+    border-color: #163d04b8;
+}
+
+.table-hover tbody tr:hover{
+    color: white;
+}
+
+.dashboard-deleteBtn{
+    background-color: #d34508;
+    border-color: #d34508;
+}
+
+.dashboard-deleteBtn:hover{
+    background-color: #d34508a6;
+    border-color: #d34508;
+}
+
