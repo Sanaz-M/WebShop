@@ -106,22 +106,23 @@ const Registration = () => {
                                     required
                                 />
                             </div>
-                            <button
-                                disabled={!email || !name || !password || !password2}
-                                onSubmit={onChange}
-                                type='submit'
-                                className='btn-registeration'
-                                onClick={() => {
-                                    alert(
-                                        `Thank you ${name}`
-                                    )
-                                }
+                            <Link to="/">
+                                <button
+                                    disabled={!email || !name || !password || !password2}
+                                    onSubmit={onChange}
+                                    type='submit'
+                                    className='btn-registeration'
+                                    onClick={() => {
+                                        alert(
+                                            `Thank you ${name}`
+                                        )
+                                    }
 
-                                }
-                            >
-                                Register
-                            </button>
-
+                                    }
+                                >
+                                    Register
+                                </button>
+                            </Link>
                         </form>
                         <p className='my-3'>
                             <span id="login-question">Already have an account? </span><Link to='/login' className="link-login ml-2"><span className="white-text">Sign In</span></Link>

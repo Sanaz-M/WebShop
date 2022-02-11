@@ -6,6 +6,7 @@ import { getProductAction } from '../../redux/action';
 import Footer from '../Footer';
 import Product from '../products/Product';
 import HomeJumbotron from './HomeJumbotron';
+import DealOffer from './DealOffer';
 
 
 const HomePage = () => {
@@ -15,22 +16,14 @@ const HomePage = () => {
 
   const productsResult = useSelector(state => state.products.result);
   const dispatch = useDispatch();
-  
-  const filterWomenProducts = () => {
-    return productsResult.filter(product => product.design === "woman")
-}
-
-const filterMenProducts = () => {
-  return productsResult.filter(product => product.design === "men").slice(0,4)
-}
 
 
-  useEffect(() => { 
+  useEffect(() => {
     dispatch(getProductAction(query));
   }, [query]);
 
 
-  const onChange = (e) => { 
+  const onChange = (e) => {
     setCurrency(e.target.value)
   };
 
@@ -45,54 +38,60 @@ const filterMenProducts = () => {
 
   return (
     <>
+      <MyNavBar onSubmit={onSubmit} query={query} searchChange={changeQuery} onChange={onChange} />
+      <HomeJumbotron />
       <Container fluid className="homepage-main">
-        <Row>
-          <Col>
-            <MyNavBar onSubmit={onSubmit} query={query} searchChange={changeQuery} onChange={onChange} />
-            <HomeJumbotron />
-          </Col>
-        </Row>
 
         {/* main cards */}
-        <Row id="main-card-row">
-          <Col md={6} lg={4}>
-            <Card className='main-first-cards' id='women-collection-card'>
-              <Card.Body>
-              </Card.Body>
-              <div className='firstCard-text'>
-                <Card.Text>
-                  Women's collection
-                </Card.Text>
-                <Button variant="primary" id='firstCards-btn'>Buy Now</Button>
-              </div>
-            </Card>
-          </Col>
-          <Col md={6} lg={4}>
-            <Card className='main-first-cards' id='men-collection-card'>
-              <Card.Body>
-              </Card.Body>
-              <div className='firstCard-text'>
-                <Card.Text>
-                  Men's collection
-                </Card.Text>
-                <Button variant="primary" id='firstCards-btn'>Buy Now</Button>
-              </div>
-            </Card>
+        <Row id="homeCollection-mainRow">
+          <Col>
+            <Row id="women-collection-row">
+              <Col sm={10} md={5}>
+                <img id="women-collection-image" variant="top" src="https://images.unsplash.com/photo-1566958799193-c2aa57a835d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=923&q=80" />
+              </Col>
+              <Col sm={4} md={6}>
+                <div>
+                  <h3 className="homeCollection-name">Women Collection</h3>
+                  <p className="homeCollection-text">Elegant and high-quality bags and shoes<br /> 100% cruelty-free and environmentally friendly.</p>
+                </div>
+                <div>
+                  <Button variant="outline-dark" className="homeCollection-btn">EXPLORE NOW</Button>
+                </div>
+              </Col>
+            </Row>
+            <Row id="men-collection-row">
+              <Col sm={10} md={5}>
+                <img id="men-collection-image" variant="top" src="https://images.pexels.com/photos/1456737/pexels-photo-1456737.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+              </Col>
+              <Col sm={4} md={6} id="men-collection-details">
+                <div>
+                  <h3 className="homeCollection-name">Men Collection</h3>
+                  <p className="homeCollection-text">Elegant and high-quality bags and shoes<br /> 100% cruelty-free and environmentally friendly.</p>
+                </div>
+                <div>
+                  <Button variant="outline-dark" className="homeCollection-btn">EXPLORE NOW</Button>
+                </div>
+              </Col>
+            </Row>
           </Col>
         </Row>
 
-        <Row>
-          <Col md={3}>
-
+        {/* Deal of the weak part */}
+        <Row id="dealOfWeak-row">
+          <Col>
+            <DealOffer />
           </Col>
         </Row>
-        <Row className="suggestion-for">SUGGESTIONS FOR WOMEN</Row>
+
+
+        {/* Row of Products- Popular products */}
+        <Row className="suggestion-for mt-5">POPULAR PRODUCTS</Row>
         <Row className="homepage-productCards-row">
           <Col md={12}>
             <Row>
 
               {
-                productsResult?.length > 0 && filterWomenProducts().map((product) => (
+                productsResult?.length > 0 && productsResult.slice(0, 8).map((product) => (
 
                   <Product
                     key={product.id}
@@ -107,25 +106,7 @@ const filterMenProducts = () => {
             </Row>
           </Col>
         </Row>
-        <Row className="suggestion-for">SUGGESTIONS FOR MEN</Row>
-        <Row className="homepage-productCards-row">
-          <Col md={12}>
-            <Row>
-              {
-                productsResult?.length > 0 && filterMenProducts().map((product) => (
-
-                  <Product
-                    key={product.id}
-                    id={product.id}
-                    image={product.image.img1}
-                    price={product.price}
-                    name={product.name}
-                    currency={currency} />
-                ))
-              }
-            </Row>
-          </Col>
-        </Row>
+        <Row className="suggestion-for">BLOG</Row>
       </Container>
       <Footer />
     </>
