@@ -60,7 +60,7 @@
   }
 
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
     background: rgba(65, 4, 48, 0.13);
   }
   
@@ -71,7 +71,7 @@
 
 ::-webkit-scrollbar-thumb {/* Handle */
     background: rgba(73, 7, 56, 0.09); 
-    border-radius: 0;
+    border-radius: 45px;
 }
 
   

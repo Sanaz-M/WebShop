@@ -1,69 +1,135 @@
-.homepage-main{
+.container.homepage-main{
     padding: 0;
+    margin-top: 45px;
 }
 
 /* Jumbotron */
 #Jumbotron1{
     color: black;
+    background: url("https://cdn.pixabay.com/photo/2017/08/01/11/48/woman-2564660_960_720.jpg");
     background-repeat:no-repeat;
     background-size: cover;
     margin: 0;
-    height: 720px;
+    height: 40rem;
+    width: 100%;
+    border-radius: 0;
 }
 
 #jumbotronVideo {
     position: absolute;
     right: 0;
-    bottom: 0;
+    top: 0;
+    margin-top: 80px;
     min-width: 100%;
-    min-height: 100%;
+    min-height: 5rem;
     object-fit: cover;
 }
 
 
 /* main cards (first row of cards) */
-#main-card-row{
-margin: 40px 0px;
-display: flex;
-justify-content: center;
+#homeCollection-mainRow{
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
-.main-first-cards{
-    position: relative;
-    height: 550px;
+#women-collection-row{
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
-
-#women-collection-card{
-    background-image: url('https://images.pexels.com/photos/7789145/pexels-photo-7789145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-    background-repeat: no-repeat;
-    object-fit: cover;
+#men-collection-row{
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
 }
 
-
-.firstCard-text{
-background-color: rgba(255, 255, 255, 0.671);
-display: flex;
-flex-direction: column;
-opacity: 0;
+#women-collection-image{
+    box-shadow: -30px -30px 0px 0px #c482cf;
+    border-radius: 0;
+    width: inherit;
+    height: 22em;
 }
 
-.main-first-cards:hover .firstCard-text{
-    opacity: 1;
+#men-collection-image{
+    box-shadow: 30px -30px 0px 0px #c482cf;
+    border-radius: 0;
+    width: inherit;
+    height: 22em;
 }
 
-#firstCards-btn{
-color: rgba(255, 255, 255, 0.);
+.homeCollection-btn{
+    background-color: transparent;
+    border: 1px solid #9c27b0;
+    width: 160px;
+    height: 60px;
 }
 
-#men-collection-card{
-    background-image: url('../../assets/homepage-photo2.jpg');
-    background-repeat: no-repeat;
-    object-fit: cover;
+.btn.homeCollection-btn:hover{
+    background-color: #c482cf;
+    border: 1px solid #c482cf;
+}
+
+#men-collection-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.homeCollection-text{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2;
+}
+
+.homeCollection-name{
+    font-weight: 1000;
 }
 
 .MuiPaginationItem-page.Mui-selected {
     background-color: #9c27b0 !important;
+}
+
+
+
+
+/* deal of the weak styles */
+#dealOfWeak-row{
+    background-color: #ba99bfbf;
+    justify-content: center;
+}
+
+#deal-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#deal-photo{
+    display: flex;
+    justify-content: center;
+}
+
+#timer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.clock-times{
+    background-color: #decbe0bd;
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-small{
+    font-size: 1rem;
 }
 
 
@@ -75,14 +141,15 @@ color: rgba(255, 255, 255, 0.);
     flex-grow: 1;
     flex-shrink: 3;
     margin: 10px;
+    justify-content: center;
 }
 
 .suggestion-for{
-    border: 1px solid #230e1f;
-    background-color: #230e1f;
-    color: rgba(238, 238, 238, 0.87);
+    color: rgb(37, 3, 35);
     padding: 20px;
     justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
 .suggestion-for.row{
@@ -95,3 +162,5 @@ color: rgba(255, 255, 255, 0.);
     border: none;
     object-fit: cover;
 }
+
+
