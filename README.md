@@ -12,3 +12,5 @@ To Start Server:
 
 To Visit App:
 `localhost:3003`
+
+This was a 1 month long project built after my last module at Strive School. Project goals included using technologies learned up until this point and familiarizing myself with documentation for new features.
