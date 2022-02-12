@@ -1,0 +1,19 @@
+.blog-row.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.blog-cards{
+    color: black;
+    border: 0;
+}
+
+.blog-title{
+    font-weight: 600;
+}
+
+.blog-text{
+    font-size: 1rem;
+}

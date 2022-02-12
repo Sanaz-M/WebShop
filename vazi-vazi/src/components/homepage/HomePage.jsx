@@ -7,6 +7,7 @@ import Footer from '../Footer';
 import Product from '../products/Product';
 import HomeJumbotron from './HomeJumbotron';
 import DealOffer from './DealOffer';
+import BlogPage from '../blog/BlogPage';
 
 
 const HomePage = () => {
@@ -107,6 +108,7 @@ const HomePage = () => {
           </Col>
         </Row>
         <Row className="suggestion-for">BLOG</Row>
+        <Row><BlogPage /></Row>
       </Container>
       <Footer />
     </>
