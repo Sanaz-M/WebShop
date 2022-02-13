@@ -1,4 +1,4 @@
-
+import '../user/userlist.css';
 import { Container, Col, Row, Table, Button } from 'react-bootstrap';
 import SideBar from '../sidebar/SideBar';
 import AdminNavBar from '../navbar/AdminNavBar';
