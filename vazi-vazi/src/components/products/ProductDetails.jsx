@@ -53,14 +53,12 @@ const ProductDetails = () => {
 
     return (
         <div>
-            <div>
-                <MyNavBar />
-            </div>
-            <div>
-                <Container fluid id="productDetails-container">
-                    <Row>
+                <Container fluid>
+                    <Row><MyNavBar /></Row>
+                    <Row id="productDetails-container">
                         <Col sm={12} lg={8}>
                             <MyCarousel image={image.img1} image1={image.img2} />
+                            <CommentArea comments={comments} />
                         </Col>
                         <Col sm={12} lg={4}>
                             <div className='px-3 py-1'>
@@ -72,7 +70,7 @@ const ProductDetails = () => {
                                 <div>{product.price}</div>
                                 <div className="product-card mt-2">
                                     <div className="mb-1">Select Size</div>
-                                    <ProductSize />
+                                    {product.category === "shoes" && <ProductSize />}
                                     </div>
                                 <div className="px-3">
                                     <Button id='addtoBag-btn' variant="success" onClick={() =>  dispatch(addToCartAction(product))}>Add to Bag</Button>
@@ -83,12 +81,8 @@ const ProductDetails = () => {
                                 <ProductAccordion origin={product.origin} color={product.color} composition={product.composition} />
                             </div>
                         </Col>
-                    </Row>
-                    <Row>
-                        <CommentArea comments={comments} />   
-                    </Row>
+                    </Row>  
                 </Container>
-            </div>
             <Footer />
         </div>
     )
