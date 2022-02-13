@@ -1,5 +1,5 @@
 import { Carousel } from 'react-bootstrap';
-
+import './myCarousel.css';
 
 
 const MyCarousel = ({ image, image1 }) => {
@@ -7,29 +7,21 @@ const MyCarousel = ({ image, image1 }) => {
     <Carousel fade>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src={`${image}/850x500?text=First slide&bg=373940`}
+          className="d-block w-100 slides-photo"
+          src={image}
           alt="First slide"
+          height="700"
         />
         <Carousel.Caption>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-inline w-100"
-          src={`${image1}/850x500?text=First slide&bg=373940`}
+          className="d-inline w-100 slides-photo"
+          src={image1}
           alt="Second slide"
+          height="700"
         />
-        <Carousel.Caption>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={`${image}/850x500?text=First slide&bg=373940`}
-          alt="Third slide"
-        />
-
         <Carousel.Caption>
         </Carousel.Caption>
       </Carousel.Item>
