@@ -1,6 +1,6 @@
 import { Navbar, Nav, FormControl, NavDropdown, Form } from 'react-bootstrap'
 import { Link } from "react-router-dom";
-import Logo from '../assets/logo.png';
+import Logo from '../assets/logo-w.png';
 import { useState, useEffect } from 'react';
 import { getProductAction } from '../redux/action';
 import { useDispatch } from 'react-redux';
@@ -18,9 +18,11 @@ const MyNavBar = ({ query, onSubmit, searchChange, onChange }) => {
     }, [query]);
 
     return (
-        <Navbar collapseOnSelect expand="lg" fixed="top" id="myNavbar">
-            <Link to="/"><img src={Logo} alt="logo" width='100' height='100' /></Link>
-            <Link to="/"><p className='text-white mr-4 ml-0'>Vazi Vazi</p></Link>
+        <Navbar collapseOnSelect expand="lg" id="myNavbar">
+            <div>
+                <Link to="/"><img src={Logo} alt="logo" width='100' height='100' /></Link>
+                <Link to="/"><p className='text-white d-inline-block mr-4 ml-0' id="vazi-vazi">Vazi Vazi</p></Link>
+            </div>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto gender">
@@ -33,19 +35,17 @@ const MyNavBar = ({ query, onSubmit, searchChange, onChange }) => {
                         <Link to='/action/3.2'>
                             <NavDropdown.Item><span>Shoes</span></NavDropdown.Item>
                         </Link>
-                        <Link to='/action/3.3'>
-                            <NavDropdown.Item><span>Something</span></NavDropdown.Item>
-                        </Link>
                         <NavDropdown.Divider />
 
                     </NavDropdown>
-                    <Link to="/blog"><span className='text-white'>Blog</span></Link>
-                    <Link to="/contact-us"><span className='mr-2 text-white'>Contact</span></Link>
+                    <Link to="/"><span className='text-white ml-2'>Blog</span></Link>
+                    <Link to="/"><span className='ml-2 text-white'>Contact</span></Link>
                 </Nav>
                 <Nav>
                     <Form className='mx-2' onSubmit={onSubmit}>
-                        <Form.Group controlId="formBasicEmail">
+                        <Form.Group className="nav-form" ntrolId="formBasicEmail">
                             <Form.Control
+                                className="d-none"
                                 type="text"
                                 placeholder="Search"
                                 value={query}
@@ -57,7 +57,7 @@ const MyNavBar = ({ query, onSubmit, searchChange, onChange }) => {
                     <Link to='/shopping-cart'><span className='mr-2 text-white'><ShoppingCartSharpIcon /></span></Link>
                     <Link to='/register'><span className='mr-2 text-white'><AccountCircleIcon /></span></Link>
                     <Form>
-                        <Form.Group controlId="exampleForm.SelectCustomSizeSm">
+                        <Form.Group className="nav-form" controlId="exampleForm.SelectCustomSizeSm">
                             <Form.Control as="select" size="sm" custom
                                 onChange={onChange}
                             >

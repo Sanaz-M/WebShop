@@ -5,20 +5,22 @@ import CountDownClock from './CountDownClock';
 
 const DealOffer = () => {
     return (
-        <Row className='justify-content-center'>
-            <Col sm={6} md={5} id="deal-description">
-                <Col id="deal-text">
-                <h3>DEAL OF THE WEAK</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <p>€80</p>
-                </Col>
-                <Col>
-                    <CountDownClock />
-                </Col>
-            </Col>
-            <Col sm={6} md={5} id="deal-photo">
+        <Row id="dealOfWeak-row" className='justify-content-center p-2'>
+            <Col sm={6} md={6} id="deal-description">
+                <div id="deal-text">
+                        <h3 className="deal-text-align"><strong>DEAL OF THE WEAK</strong></h3>
+                        <div id="border-botton"></div>
+                        <h5 className="deal-text-align">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+                    
+                    <div className="justify-content-center deal-price"><p>€80</p></div>
+                </div>
                 <div>
-                    <img src={OfferPic} alt="..." height="450" />
+                    <CountDownClock />
+                </div>
+            </Col>
+            <Col sm={6} md={6} id="deal-photo">
+                <div>
+                    <img src={OfferPic} alt="..." height="400" />
                 </div>
             </Col>
         </Row>

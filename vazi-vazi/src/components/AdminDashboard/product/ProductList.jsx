@@ -41,14 +41,15 @@ const ProductList = () => {
     }
     return (
         <Container fluid id='admin-producrList'>
-            <Row>
-                <AdminNavBar />
-            </Row>
-            <Row id='product-secondRow'>
+            <Row className='product-secondRow mt-5'>
                 <Col sm={6} md={3} lg={2}>
                     <SideBar />
                 </Col>
                 <Col sm={6} md={9} lg={10} className='mainSec-home'>
+                    <Row>
+                        <AdminNavBar />
+                    </Row>
+                    <Row>
                     <Table striped bordered hover className="product-table">
                         <thead>
                             <tr>
@@ -60,7 +61,7 @@ const ProductList = () => {
                         <tbody>
                             {
                                 productResult?.length > 0 && productResult.map((product) => (
-                    
+
                                     <tr className="dashboard-tableRow">
                                         <td>{product.name}</td>
                                         <td>{product.category}</td>
@@ -71,12 +72,13 @@ const ProductList = () => {
                                             <Button
                                                 className="dashboard-deleteBtn"
                                                 onClick={() => deletProduct(product.id)}
-                                             > Delete</Button></td>
+                                            > Delete</Button></td>
                                     </tr>
                                 ))
                             }
                         </tbody>
                     </Table>
+                    </Row>
                 </Col>
             </Row>
         </Container>

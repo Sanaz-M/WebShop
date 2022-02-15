@@ -40,9 +40,8 @@ const HomePage = () => {
   return (
     <>
       <MyNavBar onSubmit={onSubmit} query={query} searchChange={changeQuery} onChange={onChange} />
-      <HomeJumbotron />
       <Container fluid className="homepage-main">
-
+        <Row><HomeJumbotron /></Row>
         {/* main cards */}
         <Row id="homeCollection-mainRow">
           <Col>
@@ -62,7 +61,7 @@ const HomePage = () => {
             </Row>
             <Row id="men-collection-row">
               <Col sm={10} md={5}>
-                <img id="men-collection-image" variant="top" src="https://images.pexels.com/photos/1456737/pexels-photo-1456737.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+                <img id="men-collection-image" variant="top" src="https://images.pexels.com/photos/2857040/pexels-photo-2857040.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
               </Col>
               <Col sm={4} md={6} id="men-collection-details">
                 <div>
@@ -78,15 +77,13 @@ const HomePage = () => {
         </Row>
 
         {/* Deal of the weak part */}
-        <Row id="dealOfWeak-row">
-          <Col>
+        {/* <Row id="dealOfWeak-row"> */}
             <DealOffer />
-          </Col>
-        </Row>
+        {/* </Row> */}
 
 
         {/* Row of Products- Popular products */}
-        <Row className="suggestion-for mt-5">POPULAR PRODUCTS</Row>
+        <Row className="suggestion-for mt-5"><span>POPULAR PRODUCTS</span></Row>
         <Row className="homepage-productCards-row">
           <Col md={12}>
             <Row>
@@ -107,8 +104,12 @@ const HomePage = () => {
             </Row>
           </Col>
         </Row>
-        <Row className="suggestion-for">BLOG</Row>
-        <Row><BlogPage /></Row>
+        <Row className="suggestion-for"><span>BLOG</span></Row>
+        <Row className="blog-row">
+          <Col md={10}>
+            <Row><BlogPage /></Row>
+          </Col>
+        </Row>
       </Container>
       <Footer />
     </>

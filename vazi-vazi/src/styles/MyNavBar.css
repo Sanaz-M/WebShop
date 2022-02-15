@@ -4,22 +4,35 @@
     padding-right: 10px;
     font-weight: bold;
     color: white;
-    margin-bottom: 25px;
-    position: fixed;
+    position: relative;
     top: 0;
-    background-color: rgba(24, 23, 23, 0.26);
+    background-color: #47193e;
     font-size: 16px;
     align-items:baseline;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .navbar-nav{
     align-items: center;
 }
+
+#vazi-vazi{
+    font-size: 1.6rem;
+}
+
 .gender{
     align-items: center;
 }
 
 #collasible-nav-dropdown{
     color: white;
+}
+
+.form-group.nav-form{
+    margin-bottom: 0 !important;
+}
+
+.navbar-toggler{
+    background-color: #f4f2f5 !important;
 }

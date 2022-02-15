@@ -4,10 +4,10 @@ import './blogPage.css';
 
 const BlogPage = () => {
     return (
-        <Row className="blog-row">
-            <Col sm={6} md={4} lg={3}>
+        <>
+            <Col sm={4} md={4}>
                 <Card className="blog-cards">
-                    <Card.Img variant="top" src="https://images.unsplash.com/photo-1493655161922-ef98929de9d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" height="300" />
+                    <Card.Img variant="top" src="https://images.unsplash.com/photo-1439158771502-46975f6e44e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" height="300" />
                     <Card.Body>
                         <Card.Title className="blog-title">Women Fashion</Card.Title>
                         <Card.Text className="blog-text">
@@ -17,7 +17,7 @@ const BlogPage = () => {
                     </Card.Body>
                 </Card>
             </Col>
-            <Col sm={6} md={4} lg={3}>
+            <Col sm={4} md={4}>
             <Card className="blog-cards">
                     <Card.Img variant="top" src="https://images.unsplash.com/photo-1589952283406-b53a7d1347e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" height="300" />
                     <Card.Body>
@@ -29,7 +29,7 @@ const BlogPage = () => {
                     </Card.Body>
                 </Card>
             </Col>
-            <Col sm={6} md={4} lg={3}>
+            <Col sm={4} md={4}>
             <Card className="blog-cards">
                     <Card.Img variant="top" src="https://images.unsplash.com/photo-1483335584694-fb0f729b0f9c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" height="300" />
                     <Card.Body>
@@ -41,7 +41,7 @@ const BlogPage = () => {
                     </Card.Body>
                 </Card>
             </Col>
-        </Row>
+        </>
     )
 };
 

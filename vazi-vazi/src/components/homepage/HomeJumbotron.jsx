@@ -1,22 +1,18 @@
-import { Jumbotron, Button } from 'react-bootstrap';
-import JumbotronVideo from '../../assets/shoe&bag.mp4';
+import { Jumbotron, Button, Row, Col } from 'react-bootstrap';
+
+
 
 const HomeJumbotron = () => {
-    return (
-        <Jumbotron id="Jumbotron1">
-              <video autoPlay muted loop id="jumbotronVideo">
-                <source src={JumbotronVideo} type="video/mp4" />
-              </video>
-              <h1>Vazi Vazi</h1>
-
-              <p>
-                Your Style Assistant!
-              </p>
-              <p>
-                <Button variant="primary">Learn more</Button>
-              </p>
-            </Jumbotron>
-    )
+  return (
+    <Row className="jumbo-row">
+      <Jumbotron id="Jumbotron1">
+        <h1>Select Your New Perfect Style</h1>
+        <p>
+          A 100% cruelty-free shope
+        </p>
+      </Jumbotron>
+    </Row>
+  )
 }
 
 export default HomeJumbotron;
