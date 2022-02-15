@@ -30,7 +30,7 @@ const Registration = () => {
                     'Content-Type': 'application/json',
                 },
             })
-
+            console.log(response)
             if (password !== password2) {
 
                 alert('Passwords do not match');
@@ -47,7 +47,6 @@ const Registration = () => {
             // }
             else {
                 return setFormData
-
             }
 
         }

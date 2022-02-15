@@ -47,19 +47,19 @@ const CountDownClock = () => {
     return (
         <div id="timer-container">
             <div className="clock-times">
-                <p>{timer.timerDays}</p>
+                <p className="clock-numbers">{timer.timerDays}</p>
                 <small className="clock-small">Days</small>
             </div>
             <div className="clock-times">
-                <p>{timer.timerHours}</p>
+                <p className="clock-numbers">{timer.timerHours}</p>
                 <small className="clock-small">Hours</small>
             </div>{" "}
             <div className="clock-times">
-                <p>{timer.timerMinutes}</p>
+                <p className="clock-numbers">{timer.timerMinutes}</p>
                 <small className="clock-small">Minutes</small>
             </div>{" "}
             <div className="clock-times">
-                <p>{timer.timerSeconds}</p>
+                <p className="clock-numbers">{timer.timerSeconds}</p>
                 <small className="clock-small">Seconds</small>
             </div>
         </div>

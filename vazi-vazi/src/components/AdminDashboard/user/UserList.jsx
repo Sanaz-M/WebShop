@@ -42,14 +42,14 @@ const UserList = () => {
 
     return (
         <Container fluid id='admin-userList-container'>
-            <Row>
-                <AdminNavBar />
-            </Row>
-            <Row id='user-secondRow'>
+            <Row className='user-secondRow mt-5'>
                 <Col sm={0} md={4} lg={2}>
                     <SideBar />
                 </Col>
-                <Col sm={12} md={8} lg={9} className='mainSec-home'>
+                <Col sm={12} md={8} lg={10} className='mainSec-home'>
+                    <Row>
+                        <AdminNavBar />
+                    </Row>
                     <Row>
                         <Table striped bordered hover>
                             <thead>
