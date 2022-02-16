@@ -41,7 +41,8 @@ const HomePage = () => {
     <>
       <MyNavBar onSubmit={onSubmit} query={query} searchChange={changeQuery} onChange={onChange} />
       <Container fluid className="homepage-main">
-        <Row><HomeJumbotron /></Row>
+            <HomeJumbotron />
+            
         {/* main cards */}
         <Row id="homeCollection-mainRow">
           <Col>
@@ -78,7 +79,7 @@ const HomePage = () => {
 
         {/* Deal of the weak part */}
         {/* <Row id="dealOfWeak-row"> */}
-            <DealOffer />
+        <DealOffer />
         {/* </Row> */}
 
 

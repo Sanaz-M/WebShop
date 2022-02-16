@@ -3,7 +3,7 @@
     padding: 0;
     padding-right: 10px;
     font-weight: bold;
-    color: white;
+    color: rgba(255, 255, 255, 0.795);
     position: relative;
     top: 0;
     background-color: #47193e;
@@ -26,7 +26,7 @@
 }
 
 #collasible-nav-dropdown{
-    color: white;
+    color: rgba(255, 255, 255, 0.795);
 }
 
 .form-group.nav-form{
@@ -35,4 +35,8 @@
 
 .navbar-toggler{
     background-color: #f4f2f5 !important;
+}
+
+.navbar-texts{
+    color: rgba(255, 255, 255, 0.795) !important;
 }

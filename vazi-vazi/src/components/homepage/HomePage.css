@@ -4,13 +4,10 @@
 }
 
 /* Jumbotron */
-.jumbo-row.row{
-    width: 100%;
-}
 
 #Jumbotron1{
-    color: black;
-    background: url('https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    color: rgb(207, 202, 202);
+    background: url('../../assets/banner.jpg');
     background-repeat:no-repeat;
     background-size: cover;
     margin: 0;
@@ -19,14 +16,19 @@
     border-radius: 0;
 }
 
-#jumbotronVideo {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-top: 80px;
-    min-width: 100%;
-    min-height: 5rem;
-    object-fit: cover;
+.jumbo-col{
+    padding: 0 !important;
+}
+
+#jumbo-btn{
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    margin-left: 50px;
+}
+
+#jumbo-btn >p{
+    color: #c482cf;
 }
 
 

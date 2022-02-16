@@ -6,12 +6,12 @@ import { Button, Container, Row, Col } from 'react-bootstrap';
 import MyCarousel from '../carousel/MyCarousel';
 import Rating from '@material-ui/lab/Rating';
 import ProductSize from './ProductSize';
-import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addToCartAction } from '../../redux/action';
 import Footer from '../Footer';
 import ProductAccordion from './ProductAccordion';
 import CommentArea from '../comments/CommentArea';
+import MyModal from '../modals/MyModal';
 
 
 
@@ -77,7 +77,8 @@ const ProductDetails = () => {
                                 {product.category === "shoes" && <ProductSize />}
                             </div>
                             <div className="px-3">
-                                <Button id='addtoBag-btn' variant="success" onClick={() => dispatch(addToCartAction(product))}>Add to Bag</Button>
+                                <MyModal addClick={() => dispatch(addToCartAction(product))} />
+                                {/* <Button id='addtoBag-btn' variant="success" onClick={() => dispatch(addToCartAction(product))} onClick={() => {return <MyModal />}}>Add to Bag</Button> */}
                             </div>
                             <div md={3} id="crueltyFree-description">
                                 <p>In the animal rights movement, cruelty-free is a label for products or activities that do not harm or kill animals anywhere in the world. Products tested on animals or made from animals are not considered cruelty-free, since these tests are often painful and cause the suffering and death of millions of animals every year.</p>

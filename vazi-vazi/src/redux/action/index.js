@@ -5,6 +5,8 @@ export const GET_USERS = 'GET_USERS';
 export const GET_COMMENTS ="GET_COMMENTS";
 export const ADD_TO_CART = "ADD_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
+export const ADD_TO_QUANTITY = 'ADD_TO_QUANTITY';
+export const REMOVE_FROM_QUANTITY = 'REMOVE_FROM_QUANTITY';
 
 
 
@@ -121,4 +123,15 @@ export const addToCartAction = (addProduct) => ({
   export const removeFromCartAction = (indexToRemove) => ({
     type: REMOVE_FROM_CART,
     payload: indexToRemove,
+  });
+
+
+  export const addToQuantityAction = (previousQuantity) => ({
+      type: ADD_TO_QUANTITY,
+      payload: Number(previousQuantity + 1),
+  });
+
+  export const removeOfQuantityAction = (previousQuantity) => ({
+    type: REMOVE_FROM_QUANTITY,
+    payload: Number(previousQuantity - 1),
   });
