@@ -2,7 +2,7 @@ import './register.css'
 import { Container, Row, Col } from "react-bootstrap";
 import { Fragment, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import RegisterPhoto from '../../assets/register-photo3.png';
+import RegisterPhoto from '../../assets/register-photo2.jpg';
 
 
 const Registration = () => {
@@ -23,11 +23,11 @@ const Registration = () => {
     const fetchAndSubmit = async (e) => {
         e.preventDefault();
         try {
-            let response = await fetch('http://localhost:3000/users', {
+            let response = await fetch('http://localhost:3000/users/', {
                 method: 'POST',
                 body: JSON.stringify(formData),
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-type': 'application/json',
                 },
             })
             console.log(response)
@@ -40,13 +40,18 @@ const Registration = () => {
             }
             if (response.ok) {
                 let data = await response.json()
-                return data
+                setFormData({
+                    name: data.name,
+                    email: data.email,
+                    password: data.password,
+                    password2: data.password2
+                });
             }
             // if (!email.includes(/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/)) {
             //     alert('Enter valid email address')
             // }
             else {
-                return setFormData
+                alert("error")
             }
 
         }

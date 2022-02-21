@@ -29,7 +29,9 @@ export const initialState = {
   },
 
   cart: {
-    content: []
+    content: [],
+    quantity: 1,
+    total : 0
   }
 }
 

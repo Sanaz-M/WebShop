@@ -21,13 +21,13 @@ const MyNavBar = ({ query, onSubmit, searchChange, onChange }) => {
         <Navbar collapseOnSelect expand="lg" id="myNavbar">
             <div>
                 <Link to="/"><img src={Logo} alt="logo" width='100' height='100' /></Link>
-                <Link to="/"><p className='text-white d-inline-block mr-4 ml-0' id="vazi-vazi">Vazi Vazi</p></Link>
+                <Link to="/"><p className='navbar-texts d-inline-block mr-4 ml-0' id="vazi-vazi">Vazi Vazi</p></Link>
             </div>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto gender">
-                    <Link to="/women-collection"><span className='mr-2 text-white'>Women</span></Link>
-                    <Link to="/men-collection"><span className='text-white'>Men</span></Link>
+                    <Link to="/women-collection"><span className='mr-2 navbar-texts'>Women</span></Link>
+                    <Link to="/men-collection"><span className='navbar-texts'>Men</span></Link>
                     <NavDropdown title="Collections" id="collasible-nav-dropdown">
                         <Link to='/action/3.1'>
                             <NavDropdown.Item><span>Bags</span></NavDropdown.Item>
@@ -38,8 +38,8 @@ const MyNavBar = ({ query, onSubmit, searchChange, onChange }) => {
                         <NavDropdown.Divider />
 
                     </NavDropdown>
-                    <Link to="/"><span className='text-white ml-2'>Blog</span></Link>
-                    <Link to="/"><span className='ml-2 text-white'>Contact</span></Link>
+                    <Link to="/"><span className='navbar-texts ml-2'>Blog</span></Link>
+                    <Link to="/"><span className='ml-2 navbar-texts'>Contact</span></Link>
                 </Nav>
                 <Nav>
                     <Form className='mx-2' onSubmit={onSubmit}>
@@ -53,10 +53,10 @@ const MyNavBar = ({ query, onSubmit, searchChange, onChange }) => {
                             />
                         </Form.Group>
                     </Form>
-                    <Link to='/register'><span className='mr-2 text-white'><SearchSharpIcon /></span></Link>
-                    <Link to='/shopping-cart'><span className='mr-2 text-white'><ShoppingCartSharpIcon /></span></Link>
-                    <Link to='/register'><span className='mr-2 text-white'><AccountCircleIcon /></span></Link>
-                    <Form>
+                    <Link to='/register'><span className='mr-2 navbar-texts'><SearchSharpIcon /></span></Link>
+                    <Link to='/shopping-cart'><span className='mr-2 navbar-texts'><ShoppingCartSharpIcon /></span></Link>
+                    <Link to='/register'><span className='mr-2 navbar-texts'><AccountCircleIcon /></span></Link>
+                    <Form className='navbar-currency'>
                         <Form.Group className="nav-form" controlId="exampleForm.SelectCustomSizeSm">
                             <Form.Control as="select" size="sm" custom
                                 onChange={onChange}

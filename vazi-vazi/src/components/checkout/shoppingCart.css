@@ -3,7 +3,7 @@
 }
 
 #checkout-mainRow{
-   background-color: rgba(255, 255, 255, 0.74);
+   background-color: rgba(255, 255, 255, 0.918);
 }
 
 #remove-item{
@@ -18,9 +18,46 @@
 
 #shoppingCart-table{
     color: black;
+    vertical-align: middle;
+    padding: 13px
 }
 
-#checkout-col{
-    background-color: rgb(128, 85, 128);
+#shoppingCart-table.table td {
+    vertical-align: middle;
+    width: 25%;
+    font-size: 1.1rem;
 }
 
+#shoppingCart-table.table th {
+    vertical-align: middle;
+    width: 25%;
+    font-size: 1.1rem;
+}
+
+.quantity{
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+
+.shoppingCart-changeQuantity{
+    border: 1px solid gray;
+    justify-content: space-evenly;
+    display: flex;
+    width: 65%;
+}
+
+.cart-order-summary{
+    border-bottom: 3px solid #dee2e6;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.7rem;
+}
+
+#shoopingCart-summaryDetalis{
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
