@@ -13,7 +13,7 @@ const HomeJumbotron = () => {
               A 100% cruelty-free shope
             </p>
           </div>
-          <div id="jumbo-btn">
+          <div id="jumbo-secondPart">
             <p>Do you want to know more?</p>
             <div><Button variant="outline-light" className="homeCollection-btn">EXPLORE NOW</Button></div>
           </div>

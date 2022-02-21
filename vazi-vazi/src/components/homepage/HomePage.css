@@ -7,7 +7,7 @@
 
 #Jumbotron1{
     color: rgb(207, 202, 202);
-    background: url('../../assets/banner.jpg');
+    background: url('../../assets/newBanner.jpg');
     background-repeat:no-repeat;
     background-size: cover;
     margin: 0;
@@ -20,16 +20,17 @@
     padding: 0 !important;
 }
 
-#jumbo-btn{
+#jumbo-secondPart{
     display: flex;
     flex-direction: column;
     margin-top: 200px;
     margin-left: 50px;
 }
 
-#jumbo-btn >p{
-    color: #c482cf;
+#jumbo-secondPart >p{
+    color: #bb0ad9;
 }
+
 
 
 /* main cards (first row of cards) */
