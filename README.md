@@ -18,6 +18,7 @@ To Visit App:
 
 # Project Screen Shots
 Below you can see an overview of the website dashboard. Through the dashboard you can see and even modify the list of all users and products.
+<br>
 <img src="https://github.com/Sanaz-M/WebShop/blob/main/vazi-vazi/src/screenshots/dashboard.JPG" />
 
 # Description
