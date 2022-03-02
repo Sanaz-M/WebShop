@@ -34,3 +34,4 @@ This was a 1 month long project built after my last module at Strive School. Pro
  <li>HTML & CSS</li>
  <li>Bootstrap</li>
  <li>Material-Ui</li>
+</ul>
