@@ -26,9 +26,11 @@ This was a 1 month long project built after my last module at Strive School. Pro
 
 
 # Technologies
--React Js
--Redux
--HTML & CSS
--React Router
--Bootstrap
--Material-UI
+<ul>
+ <li>ReactJs</li>
+ <li>Redux</li>
+ <li>HTML & CSS</li>
+ <li>React Router</li>
+ <li>HTML & CSS</li>
+ <li>Bootstrap</li>
+ <li>Material-Ui</li>
