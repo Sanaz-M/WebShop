@@ -30,7 +30,6 @@ export const initialState = {
 
   cart: {
     content: [],
-    quantity: 1,
     total : 0
   }
 }
